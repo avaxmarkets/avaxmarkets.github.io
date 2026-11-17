@@ -1,11 +1,11 @@
-﻿# ============================================================
+# ============================================================
 #  AVAX MARKETS · VIP İŞLEM ÖNERİLERİ
 # ============================================================
 #  Her satır = 1 işlem. Alanları | işaretiyle ayırın:
 #
 #  TARİH | SEMBOL | YÖN | GİRİŞ | STOP | TP | DURUM | NOT
 #
-#  YÖN   : BUY veya SELL
+#  YÖN   : BUY, SELL veya DUYURU (yön henüz açıklanmadıysa)
 #  TP    : Birden fazla hedef için  4046 / 4060  yazın
 #  DURUM : AKTİF, BEKLEMEDE, TP, STOP veya KAPANDI
 #          (İşlem sonuçlanınca sadece bu kelimeyi değiştirin)
@@ -18,3 +18,4 @@
 # 13.11.2026 09:30 | XAUUSD | BUY | 4020 | 4000 | 4046 | AKTİF | Londra seansı
 # ============================================================
 
+17.11.2026 13:42 | XAGUSD | SELL | Anlık fiyat | — | 46,91 | AKTİF | 🥈 VIP SWING İŞLEM: Gümüş satış, hedef 46,91. Swing işlemdir. Uzmanınızla iletişime geçin.

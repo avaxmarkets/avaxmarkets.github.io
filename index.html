@@ -203,6 +203,8 @@ body.locked #gate{display:flex}
 .dir{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:8px;font-weight:700;font-size:13px;letter-spacing:1px}
 .dir.buy{background:rgba(63,191,127,.14);color:var(--up);border:1px solid rgba(63,191,127,.4)}
 .dir.sell{background:rgba(224,93,93,.14);color:var(--down);border:1px solid rgba(224,93,93,.4)}
+.dir.info{background:rgba(212,175,55,.14);color:var(--gold2);border:1px solid rgba(212,175,55,.45)}
+.sig-card.info{box-shadow:inset 3px 0 0 var(--gold),0 0 30px rgba(212,175,55,.08);border-color:rgba(212,175,55,.35)}
 .levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:8px;margin:6px 0 14px}
 .lv{background:#0e0e13;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .lv .k{font-size:10.5px;letter-spacing:1.5px;color:var(--mut);text-transform:uppercase}
@@ -403,6 +405,59 @@ body.locked #gate{display:flex}
     <!-- ============ ÜRÜNLER ============ -->
     <section id="s-prod">
       <div class="sec-head"><h2 class="gold">Ürünler & Strateji Kartları</h2><div class="muted">Her enstrümanın özellikleri ve ekibimizin analiz yaklaşımı.</div></div>
+      <div class="card glow" id="deskCard" style="margin-bottom:20px">
+        <div class="prod-head" style="flex-wrap:wrap;gap:10px;margin-bottom:12px">
+          <div><h3 style="margin:0">🔍 Analiz Masası</h3><div class="muted small">Aşağıdaki hazır butonlarla tek tıkla analiz yapın. İsterseniz soldaki araç çubuğuyla kendiniz de çizim yapabilirsiniz.</div></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <select id="deskSym" style="width:190px"></select>
+            <select id="deskTf" style="width:120px">
+              <option value="15">15 dk</option><option value="60" selected>1 saat</option><option value="240">4 saat</option><option value="D">Günlük</option><option value="W">Haftalık</option>
+            </select>
+          </div>
+        </div>
+        <div class="muted small" style="margin-bottom:6px">Tek tuşla indikatör ekleyin:</div>
+        <div class="btnrow" id="presetBtns" style="margin-bottom:8px"></div>
+        <div class="sig-note" id="presetInfo" style="margin-bottom:12px"></div>
+        <div class="chartbox" id="deskChart" style="height:620px"></div>
+      </div>
+
+      <h3 style="margin-bottom:4px">🧮 Analiz Araçları</h3>
+      <div class="muted small" style="margin-bottom:12px">Kutular örnek altın (XAUUSD) değerleriyle dolu gelir, sonuçları hemen görürsünüz. Kendi rakamlarınızı MT5'ten veya yukarıdaki grafikten alıp yazın. Günün hazır pivotları için yukarıdaki <b>🎯 Pivot Seviyeleri</b> butonunu kullanın.</div>
+      <div class="grid g3" style="margin-bottom:24px">
+        <div class="card">
+          <h3>Pivot Noktaları</h3>
+          <div class="muted small">Dünün en yüksek, en düşük ve kapanış fiyatını yazın; bugünün destek (yeşil) ve direnç (kırmızı) seviyeleri çıkar.</div>
+          <div class="grid g3" style="gap:8px">
+            <div><label>Yüksek</label><input id="pvH" type="number" step="any" value="3880"></div>
+            <div><label>Düşük</label><input id="pvL" type="number" step="any" value="3840"></div>
+            <div><label>Kapanış</label><input id="pvC" type="number" step="any" value="3858"></div>
+          </div>
+          <div class="result" id="pvOut"></div>
+        </div>
+        <div class="card">
+          <h3>Fibonacci Seviyeleri</h3>
+          <div class="muted small">Son hareketin tepe ve dip fiyatını yazın; fiyatın geri dönebileceği seviyeler ve hedefler çıkar. En önemlileri altın renkli %50 ve %61,8'dir.</div>
+          <div class="grid g3" style="gap:8px">
+            <div><label>Tepe</label><input id="fbH" type="number" step="any" value="3920"></div>
+            <div><label>Dip</label><input id="fbL" type="number" step="any" value="3840"></div>
+            <div><label>Trend</label><select id="fbD"><option value="up">Yükseliş</option><option value="down">Düşüş</option></select></div>
+          </div>
+          <div class="result" id="fbOut"></div>
+        </div>
+        <div class="card">
+          <h3>ATR ile Stop & Hedef</h3>
+          <div class="muted small">Giriş fiyatını ve ATR değerini (MT5'te ATR göstergesinden) yazın; uygun stop ve hedef çıkar. Altın için ATR genelde 15-40 arasıdır.</div>
+          <div class="grid g2" style="gap:8px">
+            <div><label>Giriş fiyatı</label><input id="atE" type="number" step="any" value="3858"></div>
+            <div><label>ATR değeri</label><input id="atA" type="number" step="any" value="25"></div>
+            <div><label>Çarpan</label><input id="atM" type="number" step="0.1" value="1.5"></div>
+            <div><label>Yön</label><select id="atD"><option value="buy">Alış (Buy)</option><option value="sell">Satış (Sell)</option></select></div>
+          </div>
+          <div class="result" id="atOut"></div>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:12px">💎 Ürün Kartları</h3>
       <div class="grid g3" id="prodCards"></div>
     </section>
 
@@ -665,6 +720,8 @@ const CONFIG = {
   ],
 
   // Ürün kartları (yaklaşım metinleri eğitim amaçlıdır)
+  stratejiTarihi: "17.11.2026",   // Ürün kartlarındaki strateji notlarının güncellenme tarihi
+
   urunler: [
     { kod:"XAUUSD", ad:"Altın / ABD Doları", tv:"OANDA:XAUUSD", kontrat:"100 ons", pip:"0.10", seans:"Londra + New York", yaklasim:"Güvenli liman talebi, ABD verileri ve dolar endeksiyle birlikte izlenir. Yüksek volatilite nedeniyle sıkı risk yönetimi gerektirir." },
     { kod:"EURUSD", ad:"Euro / ABD Doları", tv:"FX:EURUSD", kontrat:"100.000 EUR", pip:"0.0001", seans:"Londra – New York kesişimi", yaklasim:"ECB ve Fed faiz beklentileri ana belirleyicidir. Likiditesi en yüksek parite; trend takibine uygundur." },
@@ -845,8 +902,8 @@ function initProd(){
         <tr><td>Pip</td><td>${esc(u.pip)}</td></tr>
         <tr><td>En aktif seans</td><td>${esc(u.seans)}</td></tr>
       </table>
-      <div style="margin-top:12px"><span class="chip g">Analiz yaklaşımı</span><div class="muted small" style="margin-top:6px">${esc(u.yaklasim)}</div></div>
-      <div style="margin-top:14px"><button class="btn" data-open="${esc(u.tv)}">Grafikte aç →</button></div>
+      <div style="margin-top:12px"><span class="chip g">Analiz yaklaşımı</span><span class="muted small" style="margin-left:6px">📅 ${esc(CONFIG.stratejiTarihi||"")}</span><div class="muted small" style="margin-top:6px">${esc(u.yaklasim)}</div></div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn pri" data-desk="${esc(u.tv)}">🔍 Analiz et</button><button class="btn" data-open="${esc(u.tv)}">Grafik modları →</button></div>
     </div>`).join("");
   CONFIG.urunler.forEach((u,i) => tvWidget("mini"+i,"mini-symbol-overview",{symbol:u.tv,width:"100%",height:"100%",dateRange:"1M",autosize:true}));
   document.querySelectorAll("[data-open]").forEach(b => b.onclick = () => {
@@ -855,6 +912,65 @@ function initProd(){
     if (![...sel.options].some(o => o.value === b.dataset.open)) sel.insertAdjacentHTML("beforeend", `<option value="${b.dataset.open}">${b.dataset.open}</option>`);
     sel.value = b.dataset.open; drawChart();
   });
+  initDesk(); initCalcs();
+  document.querySelectorAll("[data-desk]").forEach(b => b.onclick = () => {
+    const s = $("#deskSym"), v = b.dataset.desk;
+    if (![...s.options].some(o => o.value === v)) s.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`);
+    s.value = v; drawDesk(); $("#deskCard").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+}
+const PRESETS = [
+  {id:"pivot", ad:"🎯 Pivot Seviyeleri", st:["PivotPointsStandard@tv-basicstudies"],
+   bilgi:"<b>Pivot Seviyeleri:</b> Günün destek (S1-S3) ve direnç (R1-R3) seviyelerini grafikte otomatik çizer. Fiyat pivotun üstündeyse görünüm olumlu, altındaysa zayıf kabul edilir."},
+  {id:"trend", ad:"📈 Trend", st:["MASimple@tv-basicstudies","MAExp@tv-basicstudies"],
+   bilgi:"<b>Trend (Hareketli Ortalamalar):</b> Fiyat çizgilerin üstündeyse yükseliş, altındaysa düşüş trendi vardır. Çizgilerin kesişmesi trend değişimine işaret edebilir."},
+  {id:"rsi", ad:"⚡ RSI", st:["RSI@tv-basicstudies"],
+   bilgi:"<b>RSI:</b> Alttaki göstergede 70 üstü <b>aşırı alım</b> (düşüş gelebilir), 30 altı <b>aşırı satım</b> (yükseliş gelebilir) bölgesidir."},
+  {id:"bb", ad:"🌊 Bollinger", st:["BB@tv-basicstudies"],
+   bilgi:"<b>Bollinger Bantları:</b> Fiyat üst banda değince pahalı, alt banda değince ucuz bölgededir. Bantlar daralınca sert bir hareket yaklaşıyor olabilir."},
+  {id:"macd", ad:"📊 MACD", st:["MACD@tv-basicstudies"],
+   bilgi:"<b>MACD:</b> Mavi çizgi turuncuyu yukarı keserse alış, aşağı keserse satış sinyali olarak yorumlanır. Sütunlar büyüdükçe hareket güçlenir."},
+  {id:"temiz", ad:"🧹 Temiz Grafik", st:[], bilgi:"<b>Temiz grafik:</b> Tüm göstergeler kaldırıldı. Soldaki araçlarla kendi çiziminizi yapabilirsiniz."}
+];
+let deskPreset = "pivot";
+function drawDesk(){
+  const pr = PRESETS.find(p => p.id === deskPreset) || PRESETS[0];
+  $("#presetInfo").innerHTML = pr.bilgi;
+  document.querySelectorAll("[data-preset]").forEach(b => b.classList.toggle("on", b.dataset.preset === deskPreset));
+  tvWidget("deskChart","advanced-chart",{autosize:true, symbol:$("#deskSym").value, interval:$("#deskTf").value, timezone:"Europe/Istanbul",
+    theme:"dark", style:"1", allow_symbol_change:true, hide_side_toolbar:false, hide_top_toolbar:false, withdateranges:true, studies:pr.st,
+    details:true, calendar:false, backgroundColor:"rgba(16,16,21,1)", gridColor:"rgba(255,255,255,0.04)", support_host:"https://www.tradingview.com"});
+}
+function initDesk(){
+  $("#deskSym").innerHTML = CONFIG.semboller.map(s => `<option value="${esc(s.tv)}">${esc(s.ad)}</option>`).join("");
+  $("#presetBtns").innerHTML = PRESETS.map(p => `<button class="btn" data-preset="${p.id}">${p.ad}</button>`).join("");
+  document.querySelectorAll("[data-preset]").forEach(b => b.onclick = () => { deskPreset = b.dataset.preset; drawDesk(); });
+  $("#deskSym").onchange = drawDesk; $("#deskTf").onchange = drawDesk; drawDesk();
+}
+function decOf(...vals){ return Math.min(5, Math.max(2, ...vals.map(v => { const s = String(v); return s.includes(".") ? s.split(".")[1].length : 0; }))); }
+function lvRow(label, val, d, cls){ return `<div class="sess" style="padding:5px 0"><span class="${cls||""}">${label}</span><b class="${cls||""}">${isFinite(val)?val.toFixed(d):"—"}</b></div>`; }
+function initCalcs(){
+  const pv = () => { const H=+$("#pvH").value, L=+$("#pvL").value, C=+$("#pvC").value;
+    if (!$("#pvH").value || !$("#pvL").value || !$("#pvC").value){ $("#pvOut").innerHTML = '<span class="muted small">Üç değeri girin.</span>'; return; }
+    if (H<=0 || L<=0 || C<=0 || H<L || C>H || C<L){ $("#pvOut").innerHTML = '<span class="down small">Değerleri kontrol edin: Yüksek ≥ Kapanış ≥ Düşük olmalı ve hepsi pozitif olmalı.</span>'; return; }
+    const d = decOf($("#pvH").value,$("#pvL").value,$("#pvC").value), P=(H+L+C)/3;
+    $("#pvOut").innerHTML = lvRow("R3",H+2*(P-L),d,"down")+lvRow("R2",P+(H-L),d,"down")+lvRow("R1",2*P-L,d,"down")+lvRow("Pivot",P,d,"gold")+lvRow("S1",2*P-H,d,"up")+lvRow("S2",P-(H-L),d,"up")+lvRow("S3",L-2*(H-P),d,"up"); };
+  const fb = () => { const H=+$("#fbH").value, L=+$("#fbL").value, up=$("#fbD").value==="up";
+    if (!$("#fbH").value || !$("#fbL").value || H<=L || L<=0){ $("#fbOut").innerHTML = '<span class="muted small">Tepe, dipten büyük olmalı.</span>'; return; }
+    const d = decOf($("#fbH").value,$("#fbL").value), R=H-L;
+    const ret = [0,23.6,38.2,50,61.8,78.6,100].map(r => lvRow("%"+String(r).replace(".",","), up ? H-R*r/100 : L+R*r/100, d, r===61.8||r===50?"gold":""));
+    const ext = [127.2,161.8].map(e => lvRow("Hedef %"+String(e).replace(".",","), up ? L+R*e/100 : H-R*e/100, d, up?"up":"down"));
+    $("#fbOut").innerHTML = '<div class="muted small">Geri çekilme</div>'+ret.join("")+'<div class="muted small" style="margin-top:6px">Uzatma hedefleri</div>'+ext.join(""); };
+  const at = () => { const E=+$("#atE").value, A=+$("#atA").value, M=+$("#atM").value||1.5, buy=$("#atD").value==="buy";
+    if (!$("#atE").value || !$("#atA").value){ $("#atOut").innerHTML = '<span class="muted small">Giriş ve ATR değerini girin.</span>'; return; }
+    if (E<=0 || A<=0){ $("#atOut").innerHTML = '<span class="down small">Giriş ve ATR pozitif olmalı.</span>'; return; }
+    const d = decOf($("#atE").value,$("#atA").value), dist=A*M;
+    $("#atOut").innerHTML = lvRow("Stop", buy?E-dist:E+dist, d, "down")+lvRow("Hedef 1:1", buy?E+dist:E-dist, d)+lvRow("Hedef 1:2", buy?E+2*dist:E-2*dist, d, "up")+
+      `<div class="muted small" style="margin-top:6px">Stop mesafesi: ${dist.toFixed(d)}</div>`; };
+  ["#pvH","#pvL","#pvC"].forEach(s => $(s).oninput = pv);
+  ["#fbH","#fbL","#fbD"].forEach(s => $(s).oninput = $(s).onchange = fb);
+  ["#atE","#atA","#atM","#atD"].forEach(s => $(s).oninput = $(s).onchange = at);
+  pv(); fb(); at();
 }
 
 /* Robot */
@@ -963,7 +1079,7 @@ function parseSigs(text){
   const isHeader = r => /SEMBOL|SYMBOL|TAR[İI]H/i.test(r.join(" "));
   return rows.filter(r => !isHeader(r)).map((r,i) => {
     const [tarih, sembol, yon, giris, stop, tp, durum, ...not] = r;
-    const dir = /SELL|SAT/i.test(yon) ? "sell" : "buy";
+    const dir = /SELL|SAT/i.test(yon) ? "sell" : /BUY|AL/i.test(yon) ? "buy" : "info";
     const tpRaw = String(tp||"").split("/").map(x=>x.trim()).filter(x=>x && !isNaN(numTR(x)));
     const tps = tpRaw.map(numTR);
     const [stKey, stLbl] = normStatus(durum);
@@ -983,16 +1099,17 @@ function tvSym(sym){
   return sym;
 }
 const fmtN = v => isNaN(v) ? "—" : String(v);
+const DIRL = {buy:"▲ BUY", sell:"▼ SELL", info:"📣 DUYURU"}, DIRW = {buy:"BUY", sell:"SELL", info:"DUYURU"};
 function sigCard(s){
   const ps = pipSize(s.sym, s.entry), risk = Math.abs(s.entry - s.sl);
   const tpHtml = s.tps.length ? s.tps.map((t,k)=>`<div class="lv tp"><div class="k">TP${s.tps.length>1?k+1:""}</div><div class="n">${esc(s.raw.t[k])}</div><div class="d">${isNaN(s.entry)?"":Math.round(Math.abs(t-s.entry)/ps)+" pip"}${risk?` · 1:${(Math.abs(t-s.entry)/risk).toFixed(1)}`:""}</div></div>`).join("") : `<div class="lv tp"><div class="k">TP</div><div class="n">—</div></div>`;
   const closed = ["tp","stop","kapali"].includes(s.stKey);
-  const txt = `${CONFIG.marka} VIP İşlem\n${s.sym} ${s.dir==="buy"?"BUY":"SELL"}\nGiriş: ${s.raw.e||"—"}\nStop: ${s.raw.s||"—"}\nTP: ${s.raw.t.join(" / ")||"—"}`;
+  const txt = `${CONFIG.marka} VIP İşlem\n${s.sym} ${DIRW[s.dir]}\nGiriş: ${s.raw.e||"—"}\nStop: ${s.raw.s||"—"}\nTP: ${s.raw.t.join(" / ")||"—"}`;
   return `<div class="sig-card ${s.dir} ${closed?"closed":""}">
     <div class="sig-h">
       <div><div class="sig-sym">${esc(s.sym)}</div><div class="muted small">${esc(s.tarih)}</div></div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-        <span class="dir ${s.dir}">${s.dir==="buy"?"▲ BUY":"▼ SELL"}</span><span class="st ${s.stKey}">${s.stLbl}</span>
+        <span class="dir ${s.dir}">${DIRL[s.dir]}</span><span class="st ${s.stKey}">${s.stLbl}</span>
       </div>
     </div>
     <div class="levels">
@@ -1004,7 +1121,7 @@ function sigCard(s){
     <div class="sig-actions">
       <button class="btn" data-chart="${esc(tvSym(s.sym))}">📈 Grafik</button>
       <button class="btn" data-copy="${esc(txt)}">📋 Kopyala</button>
-      <a class="btn pri" target="_blank" rel="noopener" href="${waLink(`Merhaba, VIP paneldeki ${s.sym} ${s.dir==="buy"?"BUY":"SELL"} işlemi hakkında görüşmek istiyorum.`)}">💬 Uzmanıma sor</a>
+      <a class="btn pri" target="_blank" rel="noopener" href="${waLink(`Merhaba, VIP paneldeki ${s.sym} ${DIRW[s.dir]} işlemi hakkında görüşmek istiyorum.`)}">💬 Uzmanıma sor</a>
     </div>
   </div>`;
 }
@@ -1016,7 +1133,7 @@ function renderSigs(){
   const b = $("#sigBadge"); if (b){ b.textContent = act.length; b.style.display = act.length ? "" : "none"; }
   const hs = $("#homeSig");
   if (hs){ if (act.length){ const l = act[0];
-      hs.style.display = ""; hs.innerHTML = `<div><span class="st aktif">${act.length} AKTİF VIP İŞLEM</span><h3 style="margin-top:8px">${esc(l.sym)} <span class="dir ${l.dir}" style="font-size:12px">${l.dir==="buy"?"▲ BUY":"▼ SELL"}</span> · Giriş ${esc(l.raw.e)}</h3></div><span class="btn pri">İşlemleri gör →</span>`;
+      hs.style.display = ""; hs.innerHTML = `<div><span class="st aktif">${act.length} AKTİF VIP İŞLEM</span><h3 style="margin-top:8px">${esc(l.sym)} <span class="dir ${l.dir}" style="font-size:12px">${DIRL[l.dir]}</span> · Giriş ${esc(l.raw.e)}</h3></div><span class="btn pri">İşlemleri gör →</span>`;
     } else hs.style.display = "none"; }
   document.querySelectorAll("[data-chart]").forEach(b => b.onclick = () => {
     show("chart"); const sel = $("#symSel"), v = b.dataset.chart;
