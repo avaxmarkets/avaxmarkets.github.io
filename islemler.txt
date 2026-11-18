@@ -11,6 +11,9 @@
 #          (İşlem sonuçlanınca sadece bu kelimeyi değiştirin)
 #  NOT   : İsteğe bağlı kısa açıklama
 #
+#  GERİ SAYIM: SAYAÇ | GG.AA.YYYY SS:DD (İstanbul saati) | Başlık | Açıklama
+#  Sayacı kapatmak için SAYAÇ satırının başına # koyun.
+#
 #  "#" ile başlayan satırlar sitede GÖRÜNMEZ.
 #  En alta yazılan işlem sitede EN ÜSTTE görünür.
 #
@@ -18,4 +21,5 @@
 # 13.11.2026 09:30 | XAUUSD | BUY | 4020 | 4000 | 4046 | AKTİF | Londra seansı
 # ============================================================
 
-17.11.2026 13:42 | XAGUSD | SELL | Anlık fiyat | — | 46,91 | AKTİF | 🥈 VIP SWING İŞLEM: Gümüş satış, hedef 46,91. Swing işlemdir. Uzmanınızla iletişime geçin.
+17.11.2026 13:42 | XAGUSD | SELL | Anlık fiyat | — | 46,91 | TP | 🏆 MUHTEŞEM KAZANÇ! Gümüş swing işlemimiz 46,91 hedefine ulaştı. Bu fırsatı yakalayan VIP yatırımcılarımızı tebrik ederiz! Bir sonraki fırsat için uzmanınızla iletişimde kalın.
+SAYAÇ | 18.11.2026 14:15 | Yeni VIP İşlem Geliyor! | Bir sonraki VIP fırsatımız çok yakında açıklanıyor. Yön ve seviyeler yalnızca VIP yatırımcılarımızla paylaşılacak; yerinizi şimdiden uzmanınızdan ayırtın.
