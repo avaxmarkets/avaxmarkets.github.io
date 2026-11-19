@@ -22,5 +22,5 @@
 # ============================================================
 
 17.11.2026 13:42 | XAGUSD | SELL | Anlık fiyat | — | 46,91 | TP | 🏆 MUHTEŞEM KAZANÇ! Gümüş swing işlemimiz 46,91 hedefine ulaştı. Bu fırsatı yakalayan VIP yatırımcılarımızı tebrik ederiz! Bir sonraki fırsat için uzmanınızla iletişimde kalın.
-18.11.2026 16:21 | NVDA | BUY | 155.45 | — | 159.00 | AKTİF | 🚀 VIP KOLAKASYON İŞLEMİ: NVIDIA (NVDA) alış işlemimiz 155.45 seviyesinden açıldı, hedefimiz 159.00. Bu işlem yalnızca VIP yatırımcılarımıza özeldir; hesabınıza uygun lot ve risk ayarı için kişisel uzmanınızla görüşün.
-18.11.2026 16:31 | XAUUSD | SELL | Anlık fiyat | 3784 | 3760 | AKTİF | 🥇 YENİ VIP İŞLEM: Altın (XAUUSD) satış işlemimiz açıldı. Hedef (TP) 3760, zarar durdur (SL) 3784. Hesabınıza uygun lot ve risk ayarı için kişisel uzmanınızla görüşün.
+18.11.2026 16:21 | NVDA | BUY | 155.45 | — | 159.00 | TP | ✅ HEDEF GELDİ! VIP KOLOKASYON işlemimiz NVIDIA (NVDA) 159.00 hedefine ulaştı. VIP yatırımcılarımıza tebrikler!
+18.11.2026 16:31 | XAUUSD | SELL | Anlık fiyat | 3784 | 3760 | STOP | Altın (XAUUSD) satış işlemimiz 3784 stop seviyesinde kapandı. Planlı stop sayesinde risk önceden belirlenen sınırda tutuldu. Yeni fırsatlar için uzmanınızla iletişimde kalın.
