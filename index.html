@@ -76,6 +76,40 @@ section.on{display:block}
 select,input{background:#0e0e13;border:1px solid var(--line);color:var(--txt);padding:9px 12px;border-radius:9px;font:inherit;width:100%}
 select:focus,input:focus{outline:none;border-color:var(--gold)}
 label{font-size:12px;color:var(--mut);display:block;margin:10px 0 5px;letter-spacing:.5px}
+/* Uzman Analizleri */
+.an-home{position:relative;overflow:hidden;margin-bottom:18px;padding:0!important;border:1px solid rgba(212,175,55,.45)!important}
+.an-home .an-rb{display:flex;align-items:center;gap:10px;padding:10px 20px;background:linear-gradient(90deg,rgba(212,175,55,.22),rgba(212,175,55,.04));border-bottom:1px solid rgba(212,175,55,.25);font-size:11px;font-weight:800;letter-spacing:2.5px;color:var(--gold2)}
+.an-rb .live{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(212,175,55,.7);animation:anlive 1.8s infinite}
+@keyframes anlive{70%{box-shadow:0 0 0 9px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+.an-body{display:grid;grid-template-columns:1.05fr 1fr;gap:0}
+.an-txt{padding:20px 22px}
+.an-vis{min-height:300px;border-left:1px solid var(--line);background:#0b0b0e;position:relative}
+.an-vis img{width:100%;height:100%;object-fit:contain;display:block;cursor:zoom-in;background:#fff}
+.an-home:after{content:"";position:absolute;left:0;top:0;height:2px;width:35%;background:linear-gradient(90deg,transparent,#f3d77a,transparent);animation:anscan 4.5s ease-in-out infinite}
+@keyframes anscan{0%{left:-35%}100%{left:100%}}
+.an-title{animation:anin .8s ease both}.an-full p,.an-sum{animation:anin .8s ease .15s both}
+@keyframes anin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.an-home:after,.an-title,.an-full p,.an-sum,.an-rb .live{animation:none}}
+.an-exp{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.an-av{width:46px;height:46px;border-radius:50%;background:var(--grad);color:#1a1405;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;box-shadow:0 0 0 3px rgba(212,175,55,.2)}
+.an-exp b{display:block;font-size:15.5px}.an-exp span{font-size:12px;color:var(--mut)}
+.an-tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.an-tag{font-size:11.5px;padding:4px 10px;border-radius:20px;border:1px solid var(--line);color:var(--mut);background:rgba(255,255,255,.02)}
+.an-tag b{color:var(--txt)}
+.an-tag.dn{border-color:rgba(224,93,93,.5);color:#fca5a5}.an-tag.up{border-color:rgba(63,191,127,.5);color:#86efac}.an-tag.nt{border-color:rgba(148,163,184,.5);color:#cbd5e1}
+.an-title{font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-weight:600;line-height:1.25;margin:4px 0 8px}
+.an-sum{color:#c9d3df;font-size:14px;line-height:1.65}
+.an-full p{margin:0 0 12px;color:#d3dbe5;line-height:1.75;font-size:14.5px}
+.an-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.an-disc{font-size:11.5px;color:var(--mut);margin-top:12px}
+.an-arch{margin-top:18px}
+.an-item{border-bottom:1px dashed var(--line);padding:12px 0;cursor:pointer}
+.an-item:last-child{border:none}
+.an-item .t{font-weight:600}.an-item .m{font-size:12px;color:var(--mut)}
+.an-empty{text-align:center;padding:30px;color:var(--mut)}
+#anZoom{position:fixed;inset:0;z-index:950;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+#anZoom.on{display:flex} #anZoom img{max-width:100%;max-height:100%;border-radius:10px}
+@media (max-width:900px){.an-body{grid-template-columns:1fr}.an-vis{border-left:none;border-top:1px solid var(--line);min-height:260px}}
 .chartbox{height:560px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
 .mtf .chartbox{height:340px}
 .sess{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
@@ -393,6 +427,7 @@ body.locked #gate{display:flex}
     <section id="s-home">
       <div class="mcard" id="memberCard" style="display:none"></div>
       <div id="cdHome"></div>
+      <div id="anHome"></div>
       <div class="card glow announce" style="margin-bottom:18px">
         <div class="ico">📣</div>
         <div><h3 id="annTitle"></h3><div class="muted" id="annText"></div></div>
@@ -630,6 +665,14 @@ body.locked #gate{display:flex}
       </div>
     </section>
 
+    <!-- ============ UZMAN ANALİZLERİ ============ -->
+    <section id="s-analiz">
+      <div class="sec-head"><h2 class="gold">Uzman Analizleri</h2><div class="muted" id="anUpd">Uzmanlarımızın günlük VIP teknik analizleri</div></div>
+      <div id="anMain"></div>
+      <div id="anArch"></div>
+    </section>
+    <div id="anZoom"><img alt=""></div>
+
     <div class="disclaimer" id="disclaimer"></div>
   </main>
 </div>
@@ -734,6 +777,8 @@ const CONFIG = {
   // VIP İŞLEMLER: öneriler sitedeki "islemler.txt" dosyasından okunur (her 60 sn kontrol edilir).
   // İsterseniz bir Google E-Tablo'nun "Web'de yayınla → CSV" linkini buraya yazın; o zaman oradan okunur.
   islemKaynagi: "islemler.txt",
+  // UZMAN ANALİZLERİ: "analiz.txt" dosyasından okunur (her 5 dk kontrol edilir).
+  analizKaynagi: "analiz.txt",
 
   // Sağ alttaki 📖 butonu: her tıklamada bu listeden rastgele bir piyasa bilgisi sayfası açar.
   bilgiLinkleri: [
@@ -844,7 +889,7 @@ const CONFIG = {
 
 /* ===================== Bundan sonrası kod — dokunmayın ===================== */
 const SECTIONS = [
-  ["home","🏛","Ana Sayfa"],["islem","🎯","VIP İşlemler"],["chart","📈","Grafik Modları"],["news","🌍","Haber & Takvim"],
+  ["home","🏛","Ana Sayfa"],["islem","🎯","VIP İşlemler"],["analiz","🧠","Uzman Analizleri"],["chart","📈","Grafik Modları"],["news","🌍","Haber & Takvim"],
   ["algo","⚙️","Algoritmalarımız"],["prod","💎","Ürünler & Stratejiler"],["robot","🤖","VIP Robot"],
   ["pkg","👑","VIP Paketler"],["tools","🧮","Araçlar"]
 ];
@@ -873,6 +918,7 @@ const loaded = {};
 function show(id){
   document.querySelectorAll("section").forEach(s => s.classList.toggle("on", s.id === "s-"+id));
   document.querySelectorAll("[data-sec]").forEach(b => b.classList.toggle("on", b.dataset.sec === id));
+  if (id === "analiz" && ANS[0]) anChart(ANS[0], "anMainTv");
   if (!loaded[id] && LOADERS[id]) { LOADERS[id](); loaded[id] = true; }
   try { history.replaceState(null, "", "#"+id); } catch(e){}
   window.scrollTo({top:0, behavior:"smooth"});
@@ -1323,9 +1369,92 @@ function boot(){
   tvWidget("ticker","ticker-tape",{symbols:CONFIG.semboller.map(s=>({proName:s.tv,title:s.ad})),showSymbolLogo:true,displayMode:"adaptive"});
   greet(); tickClock(); setInterval(tickClock, 30000);
   initSigs(); loadSigs(); setInterval(loadSigs, 60000);
+  $("#anZoom").onclick = () => $("#anZoom").classList.remove("on");
+  loadAnaliz(); setInterval(loadAnaliz, 300000);
   const start = (location.hash||"").replace("#","");
   show(SECTIONS.some(s=>s[0]===start) ? start : "home");
   setTimeout(() => $("#intro").classList.add("hide"), 1900);
+}
+
+/* ---- Uzman Analizleri (analiz.txt) ---- */
+let ANS = [];
+function parseAnaliz(text){
+  return String(text).replace(/\r/g,"").split(/\n-{3,}\s*\n/).map(b => {
+    const a = {metin:[]}; let inText = false;
+    b.split("\n").forEach(l => {
+      if (/^\s*#/.test(l)) return;
+      if (inText){ a.metin.push(l); return; }
+      const m = l.match(/^\s*([A-ZÇĞİÖŞÜa-zçğıöşü]+)\s*[:|]\s*(.*)$/);
+      if (!m) return;
+      const k = m[1].toLocaleUpperCase("tr-TR"), v = m[2].trim();
+      if (k === "METİN" || k === "METIN"){ inText = true; if (v) a.metin.push(v); }
+      else a[k] = v;
+    });
+    a.paras = a.metin.join("\n").split(/\n\s*\n/).map(x => x.replace(/\n/g," ").trim()).filter(Boolean);
+    return a;
+  }).filter(a => a["BAŞLIK"] && a.paras.length);
+}
+function anView(g){
+  g = (g||"").toLocaleUpperCase("tr-TR");
+  if (/DÜŞ|SAT|BEAR|NEGAT/.test(g)) return ["dn","▼ "+g];
+  if (/YÜK|AL|BULL|POZİT|POZIT/.test(g)) return ["up","▲ "+g];
+  return g ? ["nt","◆ "+g] : null;
+}
+const anIni = n => String(n||"").split(" ").filter(Boolean).map(w=>w[0]).slice(0,2).join("").toLocaleUpperCase("tr-TR");
+function anTags(a){
+  const v = anView(a["GÖRÜŞ"]);
+  return `<div class="an-tags">${a.SEMBOL?`<span class="an-tag"><b>${esc(a.SEMBOL)}</b></span>`:""}${v?`<span class="an-tag ${v[0]}">${esc(v[1])}</span>`:""}${a["KRİTİK"]?`<span class="an-tag">Kritik seviye <b>${esc(a["KRİTİK"])}</b></span>`:""}${a.DESTEK?`<span class="an-tag">Destek <b>${esc(a.DESTEK)}</b></span>`:""}${a["DİRENÇ"]?`<span class="an-tag">Direnç <b>${esc(a["DİRENÇ"])}</b></span>`:""}${a.HEDEF?`<span class="an-tag">Hedef <b>${esc(a.HEDEF)}</b></span>`:""}</div>`;
+}
+const anImgs = a => String(a["GÖRSEL"]||"").split(",").map(x=>x.trim()).filter(Boolean);
+function anVis(a, id, all){
+  const im = anImgs(a);
+  if (!im.length) return `<div id="${id}" style="position:absolute;inset:0"></div>`;
+  return (all ? im : im.slice(0,1)).map(u => `<img src="${esc(u)}" alt="${esc(a["BAŞLIK"])}" data-zoom data-sym="${esc(a.SEMBOL||"")}" onerror="anImgErr(this)" style="${all&&im.length>1?"height:auto;object-fit:contain;border-bottom:1px solid var(--line)":""}">`).join("");
+}
+function anImgErr(img){
+  const box = img.parentNode; img.remove();
+  if (box && !box.querySelector("img")){ const d = document.createElement("div"); d.style.cssText = "position:absolute;inset:0"; d.id = "anErr" + Math.random().toString(36).slice(2); box.appendChild(d);
+    tvWidget(d.id, "advanced-chart", {autosize:true, symbol: tvSym((img.dataset.sym||"XAUUSD").toUpperCase().replace(/\s/g,"")), interval:"240", timezone:"Europe/Istanbul", style:"1", hide_side_toolbar:true, allow_symbol_change:false}); }
+}
+function anChart(a, id){
+  if (!a || anImgs(a).length || !document.getElementById(id)) return;
+  tvWidget(id, "advanced-chart", {autosize:true, symbol: tvSym((a.SEMBOL||"XAUUSD").toUpperCase().replace(/\s/g,"")), interval:"240", timezone:"Europe/Istanbul", style:"1", hide_side_toolbar:true, allow_symbol_change:false, studies:["MAExp@tv-basicstudies"]});
+}
+function anExp(a){
+  return `<div class="an-exp"><div class="an-av">${esc(anIni(a.UZMAN))}</div><div><b>${esc(a.UZMAN||CONFIG.marka+" Analiz Ekibi")}</b><span>${esc(a.UNVAN||"VIP Piyasa Analisti")}${a["TARİH"]?" · "+esc(a["TARİH"]):""}</span></div></div>`;
+}
+function renderAnaliz(){
+  const home = $("#anHome"), main = $("#anMain"), arch = $("#anArch");
+  const a = ANS[0];
+  if (!a){ home.innerHTML = ""; main.innerHTML = `<div class="card an-empty">Yeni uzman analizi çok yakında burada olacak.</div>`; arch.innerHTML = ""; return; }
+  const sum = a.paras.join(" "); const short = sum.length > 280 ? sum.slice(0, sum.lastIndexOf(" ", 280)) + "…" : sum;
+  const ask = waLink(CONFIG.marka+" günün VIP analizi ("+(a.SEMBOL||"")+") hakkında uzmanımla görüşmek istiyorum.");
+  home.innerHTML = `<div class="card an-home"><div class="an-rb"><span class="live"></span>GÜNÜN VIP TEKNİK ANALİZİ</div>
+    <div class="an-body"><div class="an-txt">${anExp(a)}${anTags(a)}<div class="an-title">${esc(a["BAŞLIK"])}</div><div class="an-sum">${esc(short)}</div>
+      <div class="an-btns"><button class="btn pri" onclick="show('analiz')">📖 Analizin tamamını oku</button><a class="btn" target="_blank" rel="noopener" href="${ask}">💬 Uzmanıma sor</a></div></div>
+      <div class="an-vis">${anVis(a,"anHomeTv")}</div></div></div>`;
+  main.innerHTML = `<div class="card an-home"><div class="an-rb"><span class="live"></span>GÜNÜN UZMANI · ${esc((a.UZMAN||CONFIG.marka).toLocaleUpperCase("tr-TR"))}</div>
+    <div class="an-body"><div class="an-txt">${anExp(a)}${anTags(a)}<div class="an-title">${esc(a["BAŞLIK"])}</div>
+      <div class="an-full">${a.paras.map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+      <div class="an-btns"><a class="btn pri" target="_blank" rel="noopener" href="${ask}">💬 Bu analiz hakkında uzmanıma sor</a>${a.SEMBOL?`<button class="btn" data-anchart="${esc(tvSym(a.SEMBOL.toUpperCase().replace(/\s/g,"")))}">📈 Canlı grafikte aç</button>`:""}</div>
+      <div class="an-disc">Bu içerik uzmanımızın piyasa görüşüdür; yatırım tavsiyesi değildir. İşlem kararlarınızı hesabınıza uygun risk yönetimiyle uzmanınızla birlikte verin.</div></div>
+      <div class="an-vis">${anVis(a,"anMainTv",true)}</div></div></div>`;
+  arch.innerHTML = ANS.length > 1 ? `<div class="card an-arch"><h3 style="margin-bottom:6px">Önceki Analizler</h3>${ANS.slice(1,15).map((x,i)=>`<div class="an-item" data-an="${i+1}"><div class="t">${esc(x["BAŞLIK"])}</div><div class="m">${esc(x.UZMAN||"")} · ${esc(x.SEMBOL||"")} · ${esc(x["TARİH"]||"")}</div></div>`).join("")}</div>` : "";
+  anChart(a,"anHomeTv");
+  if ($("#s-analiz").classList.contains("on")) anChart(a,"anMainTv");
+  document.querySelectorAll("[data-an]").forEach(el => el.onclick = () => { const x = ANS.splice(+el.dataset.an,1)[0]; ANS.unshift(x); renderAnaliz(); window.scrollTo({top:0,behavior:"smooth"}); });
+  document.querySelectorAll("[data-anchart]").forEach(b => b.onclick = () => { show("chart"); const sel = $("#symSel"), v = b.dataset.anchart;
+    if (![...sel.options].some(o => o.value === v)) sel.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`); sel.value = v; drawChart(); });
+  document.querySelectorAll("[data-zoom]").forEach(im => im.onclick = () => { $("#anZoom img").src = im.src; $("#anZoom").classList.add("on"); });
+}
+async function loadAnaliz(){
+  const src = CONFIG.analizKaynagi; if (!src) return;
+  try {
+    const r = await fetch(src + "?t=" + Date.now(), {cache:"no-store"}); if (!r.ok) throw 0;
+    const txt = await r.text(); if (txt === loadAnaliz.last) return; loadAnaliz.last = txt;
+    ANS = parseAnaliz(txt).reverse();
+  } catch(e){ if (loadAnaliz.last !== undefined) return; }
+  renderAnaliz();
 }
 
 /* ---- Kişisel uzman ---- */
