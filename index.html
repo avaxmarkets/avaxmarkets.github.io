@@ -1409,7 +1409,7 @@ const anImgs = a => String(a["GÖRSEL"]||"").split(",").map(x=>x.trim()).filter(
 function anVis(a, id, all){
   const im = anImgs(a);
   if (!im.length) return `<div id="${id}" style="position:absolute;inset:0"></div>`;
-  return (all ? im : im.slice(0,1)).map(u => `<img src="${esc(u)}" alt="${esc(a["BAŞLIK"])}" data-zoom data-sym="${esc(a.SEMBOL||"")}" onerror="anImgErr(this)" style="${all&&im.length>1?"height:auto;object-fit:contain;border-bottom:1px solid var(--line)":""}">`).join("");
+  return (all ? im : im.slice(0,1)).map(u => `<img src="${esc(u)}" alt="${esc(a["BAŞLIK"])}" data-zoom data-sym="${esc(a.SEMBOL||"")}" onerror="anImgErr(this)" style="${all?"height:auto;object-fit:contain;border-bottom:1px solid var(--line)":""}">`).join("");
 }
 function anImgErr(img){
   const box = img.parentNode; img.remove();
@@ -1421,7 +1421,7 @@ function anChart(a, id){
   tvWidget(id, "advanced-chart", {autosize:true, symbol: tvSym((a.SEMBOL||"XAUUSD").toUpperCase().replace(/\s/g,"")), interval:"240", timezone:"Europe/Istanbul", style:"1", hide_side_toolbar:true, allow_symbol_change:false, studies:["MAExp@tv-basicstudies"]});
 }
 function anExp(a){
-  return `<div class="an-exp"><div class="an-av">${esc(anIni(a.UZMAN))}</div><div><b>${esc(a.UZMAN||CONFIG.marka+" Analiz Ekibi")}</b><span>${esc(a.UNVAN||"VIP Piyasa Analisti")}${a["TARİH"]?" · "+esc(a["TARİH"]):""}</span></div></div>`;
+  return `<div class="an-exp"><div class="an-av">${esc(anIni(a.UZMAN||CONFIG.marka))}</div><div><b>${esc(a.UZMAN||CONFIG.marka+" Analiz Ekibi")}</b><span>${esc(a.UNVAN||"VIP Piyasa Analisti")}${a["TARİH"]?" · "+esc(a["TARİH"]):""}</span></div></div>`;
 }
 function renderAnaliz(){
   const home = $("#anHome"), main = $("#anMain"), arch = $("#anArch");

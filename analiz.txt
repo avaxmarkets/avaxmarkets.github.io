@@ -18,3 +18,77 @@
 #
 #  "#" ile başlayan satırlar sitede GÖRÜNMEZ.
 # ============================================================
+
+TARİH: 23.11.2026
+SEMBOL: XAUUSD
+GÖRÜŞ: Düşüş
+DESTEK: 3.535 / 3.527
+DİRENÇ: 3.719 / 3.764
+GÖRSEL: analiz/xau-2311.jpg
+BAŞLIK: 🟡 XAUUSD 3.622,97 ▴ +%2,51 · 4H — Tepki kısa vadeli, 3.764 teyit seviyesi
+METİN:
+Teknik: SAT 🔻 · RSI 39 · ADX 47
+
+4 saatlik periyotta stokastik 46'ya yükselerek orta banda geldi; günlük periyotta ise 8 seviyesinde kalmayı sürdürüyor. Bu ayrışma, tepkinin şu aşamada kısa vadeli kaldığını gösteriyor.
+
+3.764 (EMA10) üzerinde kapanış görülmeden yukarı yön teyit edilmiş sayılmaz.
+
+---
+TARİH: 23.11.2026
+SEMBOL: XAGUSD
+GÖRÜŞ: Düşüş
+DESTEK: 40,20 / 40,00
+DİRENÇ: 44,00 / 44,60
+GÖRSEL: analiz/xag-2311.jpg
+BAŞLIK: ⚪ XAGUSD 42,366 ▴ — En güçlü trend gümüşte
+METİN:
+Teknik: SAT 🔻 · RSI 27 · ADX 49
+
+ADX 49 ile beş ürün içindeki en güçlü trend burada; bu seviyede trend gücü, aşırı satım göstergelerinin dönüş sinyali olarak okunmasını güçleştiriyor. Haftalık kayıp -%12,6.
+
+44,00 üzerine yerleşilmeden yapısal bir değişimden söz etmek erken.
+
+---
+TARİH: 23.11.2026
+SEMBOL: WTIUSD
+GÖRÜŞ: Düşüş
+DESTEK: 80,00 / 78,00
+DİRENÇ: 85,00 / 85,80
+GÖRSEL: analiz/wti-2311.jpg
+BAŞLIK: 🛢️ WTIUSD 81,895 ▾ — 80,00 altında satış derinleşebilir
+METİN:
+Teknik: SAT 🔻 · RSI 34 · ADX 33
+
+Beş ürün içinde günü negatif tamamlayan tek enstrüman. Stokastik 9 ile dip bölgesinde olmasına karşın ADX 33 trendin sürdüğünü gösteriyor; bu kombinasyon genellikle dönüşün gecikmesi anlamına gelir.
+
+80,00 altında satış derinleşme riski taşıyor.
+
+---
+TARİH: 23.11.2026
+SEMBOL: NDXUSD
+GÖRÜŞ: Düşüş
+DESTEK: 24.998 / 24.630
+DİRENÇ: 25.140 / 25.265
+GÖRSEL: analiz/ndx-gunluk-2311.jpg
+BAŞLIK: 🖥️ NDXUSD · Günlük — 200 günlük ortalama ana referans
+METİN:
+Teknik: SAT 🔻 · RSI 27 · ADX 31
+
+Fiyat, 200 günlük basit ortalamanın (24.998) hemen üzerinde dengelenmiş durumda; bu bölge kısa vadeli yapının ana referansı. Günlük ADX 19 ile trend zayıf olduğundan satış baskısı yapısal değil, dalgalanma karakterinde.
+
+24.998 altında 24.630 bölgesi gündeme gelir.
+
+---
+TARİH: 23.11.2026
+SEMBOL: NDXUSD
+GÖRÜŞ: Düşüş
+DESTEK: 25.000 / 24.970
+DİRENÇ: 26.410 / 26.810
+GÖRSEL: analiz/ndx-4h-2311.jpg
+BAŞLIK: 🖥️ NDXUSD 25.893,13 ▴ — 26.410 aşılmadan trend dönüşü teyit edilmiş değil
+METİN:
+Teknik: SAT 🔻 · RSI 35 · ADX 30
+
+Günlük volatilite %3,84 ve ortalama hareket alanı 921 puan ile kısa vadeli dalgalanma yüksek seyrediyor. Bugünkü yükseliş haftalık -%7,3'lük kaybın ardından geldiği için teknik yapıyı henüz değiştirmiş değil.
+
+26.410 bölgesinin aşılması, tepkinin trend dönüşüne evrilmesi açısından ilk teyit noktası olur.
