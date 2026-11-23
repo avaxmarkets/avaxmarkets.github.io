@@ -1226,7 +1226,18 @@ function pipSize(sym, price){
   if (/JPY/.test(sym)) return 0.01; if (/NAS|US30|US500|SPX|GER|DAX|UK100|NDX|DJ/.test(sym) || price > 1000) return 1;
   if (/OIL|WTI|BRENT/.test(sym)) return 0.01; if (price > 20) return 0; return 0.0001;   // hisse vb.: pip gösterilmez
 }
+// Analiz ve işlemlerde kullanılan farklı sembol adlarını grafik sembolüne bağlar
+const TV_ALIAS = {
+  NDXUSD:"OANDA:NAS100USD", NDX:"OANDA:NAS100USD", NAS100:"OANDA:NAS100USD", NAS100USD:"OANDA:NAS100USD", US100:"OANDA:NAS100USD", USTEC:"OANDA:NAS100USD", NASDAQ:"OANDA:NAS100USD", "NASDAQ100":"OANDA:NAS100USD",
+  WTI:"TVC:USOIL", WTIUSD:"TVC:USOIL", USOIL:"TVC:USOIL", XTIUSD:"TVC:USOIL", CL:"TVC:USOIL", PETROL:"TVC:USOIL",
+  BRENT:"TVC:UKOIL", UKOIL:"TVC:UKOIL", XBRUSD:"TVC:UKOIL",
+  SPX:"OANDA:SPX500USD", SPX500:"OANDA:SPX500USD", US500:"OANDA:SPX500USD", SP500:"OANDA:SPX500USD",
+  US30:"OANDA:US30USD", DJI:"OANDA:US30USD", DOW:"OANDA:US30USD",
+  DXY:"TVC:DXY", GOLD:"OANDA:XAUUSD", ALTIN:"OANDA:XAUUSD", SILVER:"OANDA:XAGUSD", GUMUS:"OANDA:XAGUSD", "GÜMÜŞ":"OANDA:XAGUSD"
+};
 function tvSym(sym){
+  sym = String(sym||"").toUpperCase().replace(/[\s.\-_\/]/g,"");
+  if (TV_ALIAS[sym]) return TV_ALIAS[sym];
   const all = [...CONFIG.urunler.map(u=>[u.kod,u.tv]), ...CONFIG.semboller.map(s=>[s.ad.split(" ")[0], s.tv])];
   const f = all.find(([k]) => k.toUpperCase() === sym); if (f) return f[1];
   if (/^[A-Z]{6}$/.test(sym)) return (/XAU|XAG/.test(sym) ? "OANDA:" : "FX:") + sym;
