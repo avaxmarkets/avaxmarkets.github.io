@@ -196,6 +196,48 @@ body.locked #gate{display:flex}
 .uz-chip a,.uz-chip button{all:unset;cursor:pointer;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px}
 .uz-chip a{background:var(--grad);color:#1a1405}
 .uz-chip button{color:var(--mut)} .uz-chip button:hover{color:var(--gold2)}
+/* --- Satış / aday modu --- */
+.blurx{filter:blur(6px);user-select:none;pointer-events:none;letter-spacing:2px}
+.sig-card.lockc .levels,.sig-card.lockc .sig-note{filter:blur(7px);user-select:none;pointer-events:none}
+.lock-in{margin-top:12px;padding:14px;border-radius:12px;text-align:center;background:linear-gradient(135deg,rgba(252,211,77,.12),rgba(212,175,55,.08));border:1px solid rgba(252,211,77,.4)}
+.lock-in b{display:block;color:#fde68a;margin-bottom:4px}
+.lock-in .muted{font-size:12.5px;margin-bottom:10px}
+.lock-in .btnrow,.lock-ov .btnrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0}
+.hs-vip{background:linear-gradient(90deg,#fde68a,#fcd34d)!important;color:#1a1405!important;border:0!important;font-weight:800!important}
+section.lockd > :not(.sec-head):not(.lock-ov){filter:blur(7px) saturate(.75);pointer-events:none;user-select:none}
+.lock-ov{position:sticky;top:10px;z-index:30;margin-bottom:18px;padding:18px 20px;border-radius:16px;text-align:center;background:linear-gradient(135deg,rgba(26,20,5,.96),rgba(6,16,28,.96));border:1px solid rgba(252,211,77,.5);box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.lock-ov h3{margin:4px 0 6px;color:#fde68a}
+.lock-ov p{margin:0 0 12px;color:#cfe8f1;font-size:14px}
+#hsModal{position:fixed;inset:0;z-index:960;background:rgba(0,0,0,.74);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+#hsModal.on{display:flex}
+#hsModal .gate-box{max-width:520px;padding:28px 26px 22px}
+.hs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
+.hs-opt{text-align:left;padding:18px 16px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);cursor:pointer;color:inherit;font:inherit;display:flex;flex-direction:column;gap:6px}
+.hs-opt:hover{border-color:var(--gold)}
+.hs-opt.v{border-color:rgba(252,211,77,.6);background:linear-gradient(160deg,rgba(252,211,77,.16),rgba(6,16,28,.4))}
+.hs-opt b{font-size:17px}
+.hs-lim{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.5px;color:#fcd34d;background:rgba(252,211,77,.12);border-radius:20px;padding:3px 10px;align-self:flex-start}.hs-opt.v b{color:#fde68a}
+.hs-opt span{font-size:12.5px;color:var(--mut);line-height:1.5}
+.hs-opt i{font-style:normal;margin-top:6px;font-weight:700;color:var(--gold2);font-size:13px}.hs-opt.v i{color:#fcd34d}
+@media (max-width:560px){.hs-grid{grid-template-columns:1fr}}
+.sm-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+@media (max-width:980px){.sm-grid{grid-template-columns:1fr}}
+.sm-kod{font-family:ui-monospace,Menlo,monospace;font-size:28px;letter-spacing:3px;font-weight:800;color:#fde68a;text-align:center;padding:14px;border-radius:12px;border:1px dashed rgba(252,211,77,.55);background:rgba(252,211,77,.07);margin:12px 0 6px;user-select:all}
+.sm-ta{width:100%;min-height:150px;resize:vertical;font:inherit;font-size:13.5px;line-height:1.55;padding:12px;border-radius:12px;background:#060d18;color:inherit;border:1px solid #1f3346}
+.sm-tpl{padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);margin-bottom:10px}
+.sm-tpl h4{margin:0 0 6px;font-size:13px;letter-spacing:1px;color:var(--gold2);text-transform:uppercase}
+.sm-tpl p{margin:0 0 10px;font-size:13.5px;line-height:1.6;white-space:pre-line}
+.sm-faq details{border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02)}
+.sm-faq summary{cursor:pointer;font-weight:700}
+.sm-faq p{margin:10px 0 8px;font-size:13.5px;line-height:1.6}
+.sm-koz{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13.5px}
+.sm-koz:last-child{border-bottom:0}
+.sm-stat{display:flex;gap:10px;margin:8px 0 12px}
+.sm-stat div{flex:1;text-align:center;padding:12px;border-radius:12px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.25)}
+.sm-stat b{display:block;font-size:24px;color:var(--gold2)}
+.sm-list{font-size:12.5px;max-height:180px;overflow:auto}
+.sm-list div{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.goz-on{background:linear-gradient(90deg,#fde68a,#fcd34d)!important;color:#1a1405!important;border:0!important}
 #yatModal{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
 #yatModal.on{display:flex}
 #yatModal .gate-box{padding:34px 30px 26px}
@@ -373,6 +415,20 @@ body.locked #gate{display:flex}
     <button type="submit" class="gate-btn" style="margin-top:4px">Kaydet ve devam et</button>
     <button type="button" class="logout" id="yatCancel" style="margin-top:12px;display:none">Vazgeç</button>
   </form>
+</div>
+
+<!-- Hesap aç (aday) -->
+<div id="hsModal">
+  <div class="gate-box">
+    <div class="t2" style="margin:0 0 4px">🔓 HESABINI AÇ, VIP'LERE KATIL</div>
+    <p class="muted" style="margin:0">Hesap türünü seçin; talebiniz doğrudan kişisel uzmanınıza WhatsApp'tan iletilsin.</p>
+    <div class="hs-grid">
+      <button class="hs-opt v" data-hs="VIP hesap (5.000 USD ve üzeri)"><b>👑 VIP Hesap</b><em class="hs-lim">5.000 USD ve üzeri</em><span>Aktif VIP işlemlerin yön ve seviyeleri, VIP Robot ve kişisel uzmanınızla birebir takip.</span><i>VIP hesap aç →</i></button>
+      <button class="hs-opt" data-hs="Standart hesap (5.000 USD altı)"><b>Standart Hesap</b><em class="hs-lim">5.000 USD altı tüm hesaplar</em><span>Hemen işlem yapmaya başlayın; hazır olduğunuzda dilediğiniz zaman VIP'e geçin.</span><i>Standart hesap aç →</i></button>
+    </div>
+    <button type="button" class="btn" id="hsPkg" style="width:100%;box-sizing:border-box;margin-top:4px">👑 VIP paketleri incele →</button>
+    <button type="button" class="logout" id="hsCancel" style="margin-top:8px">Vazgeç</button>
+  </div>
 </div>
 
 <!-- Uzman düzenleme -->
@@ -665,6 +721,46 @@ body.locked #gate{display:flex}
       </div>
     </section>
 
+    <!-- ============ SATIŞ MERKEZİ (yalnızca satış uzmanı kodlarıyla) ============ -->
+    <section id="s-satis">
+      <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap">
+        <div><h2 class="gold">📣 Satış Merkezi</h2><div class="muted" id="smSub">Aday müşterilerinizi VIP yatırımcıya dönüştürmek için araçlarınız.</div></div>
+        <button class="btn" id="smGoz">👁 Aday gözüyle bak</button>
+      </div>
+      <div class="sm-grid">
+        <div>
+          <div class="card glow" style="margin-bottom:18px">
+            <h3 style="margin-top:0">🎟️ Aday için deneme kodu oluştur</h3>
+            <div class="muted small">Kod <b id="smGun"></b> gün geçerlidir ve hangi cihazda açılırsa açılsın süre sonunda kendiliğinden kapanır. Link herkes için aynı.</div>
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+              <input id="smAday" placeholder="Adayın adı (isteğe bağlı)" style="flex:1;min-width:180px">
+              <button class="btn pri" id="smUret">🎟️ Kod oluştur</button>
+            </div>
+            <div id="smOut"></div>
+          </div>
+          <div class="card" style="margin-bottom:18px">
+            <h3 style="margin-top:0">💬 Hazır mesaj şablonları</h3>
+            <div class="muted small" style="margin-bottom:10px">Son işlemler ve adınız otomatik yazılır. Kopyalayıp adaya gönderin.</div>
+            <div id="smTpl"></div>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="margin-bottom:18px">
+            <h3 style="margin-top:0">🏆 Haftanın satış kozları</h3>
+            <div id="smKoz"></div>
+          </div>
+          <div class="card sm-faq" style="margin-bottom:18px">
+            <h3 style="margin-top:0">🛡️ İtiraz cevapları</h3>
+            <div id="smFaq"></div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">🗂️ Oluşturduğum kodlar</h3>
+            <div class="sm-list" id="smList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ UZMAN ANALİZLERİ ============ -->
     <section id="s-analiz">
       <div class="sec-head"><h2 class="gold">Uzman Analizleri</h2><div class="muted" id="anUpd">Uzmanlarımızın günlük VIP teknik analizleri</div></div>
@@ -760,6 +856,27 @@ const CONFIG = {
     kodlar: ["1a45cd6642b1c2ca0557086ddc70190963b518ba5c600324fbeff6e78b95eeaa"],
     gun: 3,
     sonTarih: "2026-12-31"
+  },
+  // SATIŞ EKİBİ: 14 satış uzmanı kodu (sırayla 1…14). Kodların kendisi masaüstündeki listede.
+  satis: {
+    kodlar: [
+      "38b8c9d157ef7cb72f8da1538b0143eb4a6d3dfeba71cac5e9c57ae6937f7df7",  // #1
+      "ce9ccd2a78f0bae56aafefe9ab7a58eda1da6e876a5d652b86ecd45ad3edd848",  // #2
+      "809e72d6abbf3e645280ef22ade867cab180bc37521a281f7513f7adb5f245e7",  // #3
+      "bba63f331471cdf07b7cbe69670827cd53baaff2fdcae427b832437bd1875d9d",  // #4
+      "5ed44c9496e5a5f0632ff6f4d3d1092eb23679ee83bf52d0a2d746edea24dbf3",  // #5
+      "e1bc899154eae5fbf0fcd9797e289400ff698521ae8d1b8acc5cc4dd400fc45b",  // #6
+      "4d16d8d8488b7f928f60e09de0126a5f6b03ab3e5b5fddc9de5acde6ac8b7180",  // #7
+      "595912a3419a89f9eecf6deb1ba3be33d4257d6c873611c13766cd72a781d950",  // #8
+      "d0814ed401a264b1ea2329cc42f3ee6c8446cacc01efbba5e5a4c78fa90d872c",  // #9
+      "e1c0601c81239a775b2b1b9ab1bf32b9da0690808d1e18308f55625d42048463",  // #10
+      "fc4d535d64fefc111517e7d7bf83384ef7d3cf1155cc2bb159e426cd5fb8a926",  // #11
+      "2cf376a796a781a161d04accec8927995590dde927d09998d45fa265b64e81eb",  // #12
+      "fa4c9af925cbb9d025ebbf78134d13bb1482b8245aa0b11ac01de56099459753",  // #13
+      "51680f13eee51b3be38537377badb5b54afacf7d7171fdb9a41afc62c100c5d1",  // #14
+    ],
+    adayGun: 5,                 // satışçının ürettiği aday kodlarının geçerlilik süresi (gün)
+    anahtar: "166d98afbfe568654c943b9a"
   },
   hatirlaGun: 7,   // "beni hatırla" seçilirse kaç gün tekrar kod sorulmasın
 
@@ -918,15 +1035,20 @@ const loaded = {};
 function show(id){
   document.querySelectorAll("section").forEach(s => s.classList.toggle("on", s.id === "s-"+id));
   document.querySelectorAll("[data-sec]").forEach(b => b.classList.toggle("on", b.dataset.sec === id));
+  if (id === "satis" && !isSales()) { show("home"); return; }
+  if (id === "satis") renderSatis();
+  applyLocks(id);
   if (id === "analiz" && ANS[0]) anChart(ANS[0], "anMainTv");
   if (!loaded[id] && LOADERS[id]) { LOADERS[id](); loaded[id] = true; }
   try { history.replaceState(null, "", "#"+id); } catch(e){}
   window.scrollTo({top:0, behavior:"smooth"});
 }
+function navList(){ return isSales() ? [SECTIONS[0],["satis","📣","Satış Merkezi"],...SECTIONS.slice(1)] : SECTIONS; }
 function buildNav(){
-  const html = SECTIONS.map(([id,ic,t]) => `<button data-sec="${id}"><span class="ic">${ic}</span>${t}${id==="islem"?'<span class="nav-badge" id="sigBadge" style="display:none"></span>':""}</button>`).join("");
+  const lk = id => id==="robot" && adayView() ? " 🔒" : "";
+  const html = navList().map(([id,ic,t]) => `<button data-sec="${id}"><span class="ic">${ic}</span>${t}${lk(id)}${id==="islem"?'<span class="nav-badge" id="sigBadge" style="display:none"></span>':""}</button>`).join("");
   $("#nav").innerHTML = html;
-  $("#mobnav").innerHTML = SECTIONS.map(([id,ic,t]) => `<button data-sec="${id}">${ic} ${t}</button>`).join("");
+  $("#mobnav").innerHTML = navList().map(([id,ic,t]) => `<button data-sec="${id}">${ic} ${t}${lk(id)}</button>`).join("");
   document.querySelectorAll("[data-sec]").forEach(b => b.onclick = () => show(b.dataset.sec));
 }
 
@@ -1245,7 +1367,22 @@ function tvSym(sym){
 }
 const fmtN = v => isNaN(v) ? "—" : String(v);
 const DIRL = {buy:"▲ BUY", sell:"▼ SELL", info:"📣 DUYURU"}, DIRW = {buy:"BUY", sell:"SELL", info:"DUYURU"};
+function hsBtns(){ return `<div class="btnrow"><button class="btn hs-vip" onclick="openHesap('VIP hesap')">👑 VIP hesap aç</button><button class="btn" onclick="openHesap('Standart hesap')">Standart hesap aç</button></div>`; }
+function sigLocked(s){
+  const lv = k => `<div class="lv"><div class="k">${k}</div><div class="n">●●●●</div></div>`;
+  return `<div class="sig-card lockc">
+    <div class="sig-h">
+      <div><div class="sig-sym">${esc(s.sym)}</div><div class="muted small">${esc(s.tarih)}</div></div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+        <span class="dir blurx">● ● ●</span><span class="st ${s.stKey}">${s.stLbl}</span>
+      </div>
+    </div>
+    <div class="levels">${lv("Giriş")}${lv("Stop")}${lv("TP")}</div>
+    <div class="lock-in"><b>🔒 Yön ve seviyeler VIP üyelerimize özel</b><div class="muted">Bu işlemi şu an VIP yatırımcılarımız takip ediyor. Hesabınızı açın, bir sonrakini siz de görün.</div>${hsBtns()}</div>
+  </div>`;
+}
 function sigCard(s){
+  if (adayView() && ["aktif","bekle","karda"].includes(s.stKey)) return sigLocked(s);
   const ps = pipSize(s.sym, s.entry), risk = Math.abs(s.entry - s.sl);
   const tpHtml = s.tps.length ? s.tps.map((t,k)=>`<div class="lv tp"><div class="k">TP${s.tps.length>1?k+1:""}</div><div class="n">${esc(s.raw.t[k])}</div><div class="d">${isNaN(s.entry)||!ps?"":Math.round(Math.abs(t-s.entry)/ps)+" pip"}${risk?` · 1:${(Math.abs(t-s.entry)/risk).toFixed(1)}`:""}</div></div>`).join("") : `<div class="lv tp"><div class="k">TP</div><div class="n">${esc(s.raw.tt||"—")}</div></div>`;
   const closed = ["stop","kapali"].includes(s.stKey), won = s.stKey==="tp", star = won && /🏆/.test(s.note), lost = s.stKey==="stop";
@@ -1315,7 +1452,7 @@ function renderSigs(){
   const b = $("#sigBadge"); if (b){ b.textContent = act.length; b.style.display = act.length ? "" : "none"; }
   const hs = $("#homeSig");
   if (hs){ if (act.length){ const l = act[0];
-      hs.style.display = ""; hs.innerHTML = `<div><span class="st aktif">${act.length} AKTİF VIP İŞLEM</span><h3 style="margin-top:8px">${esc(l.sym)} <span class="dir ${l.dir}" style="font-size:12px">${DIRL[l.dir]}</span> · Giriş ${esc(l.raw.e)}</h3></div><span class="btn pri">İşlemleri gör →</span>`;
+      hs.style.display = ""; hs.innerHTML = `<div><span class="st aktif">${act.length} AKTİF VIP İŞLEM</span><h3 style="margin-top:8px">${esc(l.sym)} ${adayView()?`<span class="dir blurx" style="font-size:12px">● ● ●</span> · <span class="muted" style="font-size:14px">🔒 Seviyeler VIP üyelerimize özel</span>`:`<span class="dir ${l.dir}" style="font-size:12px">${DIRL[l.dir]}</span> · Giriş ${esc(l.raw.e)}`}</h3></div><span class="btn pri">İşlemleri gör →</span>`;
     } else hs.style.display = "none"; }
   document.querySelectorAll("[data-chart]").forEach(b => b.onclick = () => {
     show("chart"); const sel = $("#symSel"), v = b.dataset.chart;
@@ -1375,7 +1512,7 @@ function boot(){
   $("#disclaimer").textContent = "⚠ Risk Uyarısı: " + CONFIG.uyari;
   renderUz();
   renderYat();
-  if (!yatNow()) setTimeout(() => openYat(false), 2100);
+  if (!yatNow() && !isSales()) setTimeout(() => openYat(false), 2100);
   buildNav();
   tvWidget("ticker","ticker-tape",{symbols:CONFIG.semboller.map(s=>({proName:s.tv,title:s.ad})),showSymbolLogo:true,displayMode:"adaptive"});
   greet(); tickClock(); setInterval(tickClock, 30000);
@@ -1383,7 +1520,7 @@ function boot(){
   $("#anZoom").onclick = () => $("#anZoom").classList.remove("on");
   loadAnaliz(); setInterval(loadAnaliz, 300000);
   const start = (location.hash||"").replace("#","");
-  show(SECTIONS.some(s=>s[0]===start) ? start : "home");
+  show(navList().some(s=>s[0]===start) ? start : "home");
   setTimeout(() => $("#intro").classList.add("hide"), 1900);
 }
 
@@ -1496,7 +1633,8 @@ function checkYat(ad, login){
 }
 function waText(text){
   const y = yatNow(); if (!y) return text;
-  return `Merhaba, ben ${y.ad} (MT5: ${y.login}). ` + String(text).replace(/^Merhaba,\s*/i,"");
+  if (isSales()) return text;
+  return `Merhaba, ben ${y.ad} (${isAday()?"Tel":"MT5"}: ${y.login}). ` + String(text).replace(/^Merhaba,\s*/i,"");
 }
 function waLink(text){
   const u = uzNow(); const num = u ? u.tel : CONFIG.iletisim.whatsapp;
@@ -1507,14 +1645,15 @@ function renderYat(){
   if (!y){ $("#memberCard").style.display = "none"; return; }
   const ini = y.ad.split(" ").filter(Boolean).map(w=>w[0]).slice(0,2).join("").toLocaleUpperCase("tr-TR");
   const since = new Date(y.since||Date.now()).toLocaleDateString("tr-TR",{day:"2-digit",month:"long",year:"numeric"});
-  const tier = window._session && window._session.trial ? "Deneme Üye" : "VIP Üye";
+  if (isSales()){ $("#memberCard").style.display = "none"; return; }
+  const tier = isAday() ? "Aday Üye" : window._session && window._session.trial ? "Deneme Üye" : "VIP Üye";
   $("#greet").textContent = y.ad;
-  $("#tierBadge").textContent = `◆ ${tier} · MT5 ${y.login}`;
+  $("#tierBadge").textContent = `◆ ${tier} · ${isAday()?"Tel":"MT5"} ${y.login}`;
   const mc = $("#memberCard"); mc.style.display = "";
   mc.innerHTML = `<button class="medit" id="yatEdit" title="Bilgilerimi düzenle">✎ Düzenle</button>
     <div class="mav">${esc(ini)}</div>
-    <div class="mi"><small>${esc(CONFIG.marka)} · Private Client</small><b>${esc(y.ad)}</b><span>Özel VIP yatırımcımız · üyelik: ${esc(since)}</span></div>
-    <div class="mt"><div>MT5 Hesap No<b>${esc(y.login)}</b></div><div>Üyelik<b class="gold">◆ ${tier}</b></div>${u?`<div>Uzmanınız<b>${esc(u.ad)}</b></div>`:""}</div>`;
+    <div class="mi"><small>${esc(CONFIG.marka)} · Private Client</small><b>${esc(y.ad)}</b><span>${isAday()?"Size özel VIP deneme erişimi":"Özel VIP yatırımcımız · üyelik: "+esc(since)}</span></div>
+    <div class="mt"><div>${isAday()?"Telefon":"MT5 Hesap No"}<b>${esc(y.login)}</b></div><div>Üyelik<b class="gold">◆ ${tier}</b></div>${u?`<div>Uzmanınız<b>${esc(u.ad)}</b></div>`:""}</div>`;
   $("#yatEdit").onclick = () => openYat(true);
 }
 function openYat(canCancel){
@@ -1539,7 +1678,7 @@ function checkUz(ad, tel){
 function renderUz(){
   const u = uzNow(), c = CONFIG.iletisim;
   $("#uzChip").innerHTML = u
-    ? `<span>👤 Uzmanınız: <b>${esc(u.ad)}</b></span><a href="${waLink("Merhaba, VIP panelden yazıyorum.")}" target="_blank" rel="noopener" title="WhatsApp">💬</a><button id="uzEdit" title="Uzmanı değiştir">✎</button>`
+    ? `<span>👤 ${isSales()?"Satış uzmanı":"Uzmanınız"}: <b>${esc(u.ad)}</b></span><a href="${waLink("Merhaba, VIP panelden yazıyorum.")}" target="_blank" rel="noopener" title="WhatsApp">💬</a><button id="uzEdit" title="Uzmanı değiştir">✎</button>`
     : `<span class="muted">Uzman tanımlı değil</span><button id="uzEdit" title="Uzman ekle">✎</button>`;
   $("#uzEdit").onclick = openUz;
   $("#fab").innerHTML = `<a href="${waLink("Merhaba, VIP panelden yazıyorum.")}" target="_blank" rel="noopener" title="Uzmanınıza WhatsApp'tan yazın">💬</a>` +
@@ -1600,11 +1739,132 @@ async function sha256(txt){
   return sha256Fallback(unescape(encodeURIComponent(txt)));
 }
 const norm = s => s.trim().toUpperCase();
+/* ===== Satış ekibi / aday erişimi ===== */
+const SS = () => window._session || {};
+const isSales = () => !!SS().sales;
+const isAday = () => !!SS().aday;
+const adayView = () => isAday() || (isSales() && sessionStorage.getItem("avax_adaygoz")==="1");
+const B32 = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+const b32 = (n,len) => { let o=""; for (let i=0;i<len;i++){ o = B32[n & 31] + o; n = Math.floor(n/32); } return o; };
+const unb32 = t => { let n=0; for (const c of t){ const i=B32.indexOf(c); if (i<0) return -1; n = n*32+i; } return n; };
+async function adayChk(n, data){ return parseInt((await sha256(CONFIG.satis.anahtar+"|"+n+"|"+data)).slice(0,5),16); }
+async function adayKodUret(n){
+  const h = Math.ceil((Date.now() + CONFIG.satis.adayGun*864e5)/36e5), data = (h % 524288)*32 + Math.floor(Math.random()*32);
+  return { kod:`A${n}-${b32(data,5)}-${b32(await adayChk(n,data),4)}`, exp:h*36e5 };
+}
+async function adayKodCoz(v){
+  const m = String(v).toUpperCase().replace(/\s/g,"").match(/^A(\d{1,2})-?([2-9A-Z]{5})-?([2-9A-Z]{4})$/); if (!m) return null;
+  const n = +m[1], data = unb32(m[2]), c = unb32(m[3]);
+  if (n<1 || n>CONFIG.satis.kodlar.length || data<0 || c<0 || (await adayChk(n,data)) !== c) return {gecersiz:true};
+  return { n, exp:Math.floor(data/32)*36e5, kod:`A${n}-${m[2]}-${m[3]}` };
+}
+function setAdayGoz(on){
+  try{ sessionStorage.setItem("avax_adaygoz", on?"1":"0"); }catch(e){}
+  buildNav(); renderSigs(); renderTrial(true); renderYat(); adayUi();
+  const cur = (document.querySelector("section.on")||{}).id || "s-home"; applyLocks(cur.replace("s-",""));
+  if ($("#smGoz")) { $("#smGoz").textContent = on ? "↩ VIP görünüme dön" : "👁 Aday gözüyle bak"; $("#smGoz").classList.toggle("goz-on", on); }
+}
+const LOCKSEC = {
+  robot:["🤖 VIP Robot üyelerimize özel","Robotun işlemlerini hesabınıza otomatik kopyalamak için hesabınızı açın."],
+  algo:["⚙️ Algoritma detayları üyelerimize özel","Ekibimizin özel indikatör ve algoritmaları hesap açan yatırımcılarımıza açılır."],
+  prod:["💎 Strateji kartları üyelerimize özel","Analiz masası ve strateji detayları hesap açan yatırımcılarımıza açılır."]
+};
+function applyLocks(id){
+  Object.keys(LOCKSEC).forEach(k => {
+    const sec = $("#s-"+k); if (!sec) return;
+    const on = adayView(); sec.classList.toggle("lockd", on);
+    let ov = sec.querySelector(":scope > .lock-ov");
+    if (on && !ov){ ov = document.createElement("div"); ov.className = "lock-ov";
+      ov.innerHTML = `<div style="font-size:30px">🔒</div><h3>${LOCKSEC[k][0]}</h3><p>${LOCKSEC[k][1]}</p>${hsBtns()}`;
+      const head = sec.querySelector(":scope > .sec-head"); head ? head.after(ov) : sec.prepend(ov); }
+    if (!on && ov) ov.remove();
+  });
+}
+function openHesap(tip){ $("#hsModal").classList.add("on"); }
+function adayUi(){}
+document.querySelectorAll("#hsModal [data-hs]").forEach(b => b.onclick = () => {
+  window.open(waLink(`Merhaba, ${CONFIG.marka} VIP paneli inceledim, ${b.dataset.hs} açmak istiyorum. Süreci başlatabilir miyiz?`), "_blank", "noopener");
+  $("#hsModal").classList.remove("on");
+});
+$("#hsCancel").onclick = () => $("#hsModal").classList.remove("on");
+$("#hsPkg").onclick = () => { $("#hsModal").classList.remove("on"); show("pkg"); };
+$("#hsModal").addEventListener("click", e => { if (e.target.id==="hsModal") $("#hsModal").classList.remove("on"); });
+
+/* Satış Merkezi */
+const SMKEY = "avax_sm_kodlar";
+const trDate = ms => new Date(ms).toLocaleString("tr-TR",{timeZone:"Europe/Istanbul",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
+function smCopyBtn(txt, lbl){ return `<button class="btn" data-smcopy="${esc(txt)}">📋 ${lbl||"Kopyala"}</button>`; }
+function smWire(root){
+  root.querySelectorAll("[data-smcopy]").forEach(b => b.onclick = async () => { const t=b.textContent;
+    try{ await navigator.clipboard.writeText(b.dataset.smcopy); b.textContent="✓ Kopyalandı"; }catch(e){ b.textContent="Kopyalanamadı"; } setTimeout(()=>b.textContent=t,1600); });
+}
+function smKozlar(){
+  const now = Date.now(), pd = t => { const m = String(t).match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/); return m ? Date.UTC(+m[3],+m[2]-1,+m[1]) : 0; };
+  const son = SIGS.filter(x => now - pd(x.tarih) < 14*864e5);
+  const tp = son.filter(x=>x.stKey==="tp"), st = son.filter(x=>x.stKey==="stop"), akt = SIGS.filter(x=>["aktif","bekle","karda"].includes(x.stKey));
+  const kar = x => { const m = x.note.match(/([\d.]{4,})\s*USD\s*K[ÂA]R/i); return m ? m[1]+" USD kâr" : ""; };
+  return {tp, st, akt, kar, sonTp: tp.slice().sort((a,b)=>b.i-a.i)};
+}
+function renderSatis(){
+  const u = uzNow() || {ad:"",tel:""}, n = SS().n, K = smKozlar(), link = location.origin + location.pathname;
+  $("#smGun").textContent = CONFIG.satis.adayGun;
+  $("#smSub").innerHTML = `Satış uzmanı <b>#${n}</b>${u.ad?` · ${esc(u.ad)}`:""} — aday müşterilerinizi VIP yatırımcıya dönüştürmek için araçlarınız.`;
+  const g = sessionStorage.getItem("avax_adaygoz")==="1"; $("#smGoz").textContent = g ? "↩ VIP görünüme dön" : "👁 Aday gözüyle bak"; $("#smGoz").classList.toggle("goz-on", g);
+  $("#smGoz").onclick = () => setAdayGoz(!(sessionStorage.getItem("avax_adaygoz")==="1"));
+  // Kod üret
+  $("#smUret").onclick = async () => {
+    const ad = $("#smAday").value.trim(), r = await adayKodUret(n);
+    const msg = `Merhaba${ad?" "+ad:""}, ${CONFIG.marka} VIP panelimize size özel ${CONFIG.satis.adayGun} günlük erişim tanımladım 🎁\n\n🔗 Link: ${link}\n🔑 Erişim kodunuz: ${r.kod}\n\nGiriş ekranında "Kişisel Uzmanınız" kısmına şunu yazın:\n👤 ${u.ad||"(adım)"} – 📱 ${u.tel||"(numaram)"}\n\nPanelde VIP işlemlerimizi, uzman analizlerimizi ve son kazançlarımızı inceleyebilirsiniz. Sorunuz olursa buradayım.`;
+    let L=[]; try{ L = JSON.parse(localStorage.getItem(SMKEY)||"[]"); }catch(e){}
+    L.unshift({ad:ad||"—", kod:r.kod, exp:r.exp, t:Date.now()}); L = L.slice(0,100);
+    try{ localStorage.setItem(SMKEY, JSON.stringify(L)); }catch(e){}
+    $("#smOut").innerHTML = `<div class="sm-kod">${r.kod}</div><div class="muted small" style="text-align:center;margin-bottom:10px">${trDate(r.exp)} (TSİ) tarihine kadar geçerli</div>
+      <textarea class="sm-ta" id="smMsg">${esc(msg)}</textarea>
+      <div class="btnrow" style="margin-top:8px">${smCopyBtn(msg,"Mesajı kopyala")}${smCopyBtn(r.kod,"Sadece kodu kopyala")}<a class="btn pri" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(msg)}">💬 WhatsApp'ta gönder</a></div>`;
+    smWire($("#smOut")); smListe();
+  };
+  smListe();
+  // Kozlar
+  const top = K.sonTp.slice(0,6);
+  $("#smKoz").innerHTML = `<div class="sm-stat"><div><b>${K.tp.length}</b>Hedefe ulaşan<br><span class="muted small">son 14 gün</span></div><div><b>${K.st.length}</b>Stop<br><span class="muted small">son 14 gün</span></div><div><b>${K.akt.length}</b>Aktif VIP<br><span class="muted small">şu an</span></div></div>
+    ${top.map(x=>`<div class="sm-koz"><span>🏆 <b>${esc(x.sym)}</b> ${DIRW[x.dir]||""} · ${esc(x.tarih.split(" ")[0])}</span><span class="gold">${esc(K.kar(x) || ("TP "+(x.raw.t.join(" / ")||x.raw.tt||"✓")))}</span></div>`).join("") || '<div class="muted">Son 14 günde sonuçlanan işlem yok.</div>'}
+    <div class="btnrow" style="margin-top:12px">${smCopyBtn(kozMetni(K),"Özeti kopyala")}</div>`;
+  // Şablonlar
+  const s1 = K.sonTp[0], tpTxt = s1 ? `${s1.sym} işlemimiz ${K.kar(s1) ? K.kar(s1)+" ile " : ""}hedefe ulaştı` : "VIP işlemlerimiz hedeflerine ulaşıyor";
+  const ben = u.ad ? `ben ${CONFIG.marka}'tan ${u.ad}` : `ben ${CONFIG.marka}'tan`;
+  const T = [
+    ["1 · İlk temas", `Merhaba [Ad], ${ben}. Yatırımcılarımıza kişisel uzmanla VIP işlem ve uzman analizi hizmeti veriyoruz. Son olarak ${tpTxt} 🏆\nSize ${CONFIG.satis.adayGun} günlük ücretsiz VIP panel erişimi tanımlamamı ister misiniz?`],
+    ["2 · Kod sonrası (1. gün)", `Panele girebildiniz mi [Ad]? VIP İşlemler bölümündeki "Sonuçlananlar" sekmesine bakmanızı öneririm; bütün işlemlerimiz tarih, giriş ve hedef seviyesiyle orada. Merak ettiğiniz bir işlem olursa birlikte üzerinden geçelim.`],
+    ["3 · Aktif işlem merakı", K.akt.length ? `[Ad], şu an panelde ${K.akt.map(x=>x.sym).slice(0,2).join(" ve ")} için aktif bir VIP işlemimiz var 🔥 Yön ve seviyeler VIP üyelerimize açık. Hesabınızı bugün açarsak bir sonraki işlemi birlikte takip ederiz.` : `[Ad], yeni VIP işlemimiz geldiğinde yön ve seviyeler yalnızca VIP üyelerimize açılıyor. Hesabınızı şimdi açarsak bir sonraki işlemi ilk anından birlikte takip ederiz.`],
+    ["4 · Süre bitmeden (son gün)", `[Ad], deneme erişiminizin bitmesine 1 gün kaldı ⏳ Bu süreçte ${K.tp.length} VIP işlemimiz hedefine ulaştı. İsterseniz Standart hesapla küçük başlayıp sonuçları kendi hesabınızda görün, güveniniz oturdukça büyütün. Hesabınızı bugün açalım mı?`],
+    ["5 · Süre bitti", `Merhaba [Ad], deneme süreniz doldu ama VIP işlemlerimiz devam ediyor. Hesabınızı açtığınızda panel erişiminiz kalıcı olur ve kişisel uzmanınız olarak ben yanınızda olurum. Uygun olduğunuz bir saatte 5 dakika konuşalım mı?`]
+  ];
+  $("#smTpl").innerHTML = T.map(([h,t]) => `<div class="sm-tpl"><h4>${h}</h4><p>${esc(t)}</p>${smCopyBtn(t)}</div>`).join("");
+  // İtirazlar
+  const F = [
+    ["“Güvenilir misiniz?”", "Bütün VIP işlemlerimiz tarih, giriş ve hedef seviyesiyle panelde duruyor; isterseniz TradingView'dan kendiniz kontrol edin. Küçük bir tutarla başlayın, ilk çekiminizi yapın, güveniniz oturdukça büyütün."],
+    ["“Az parayla başlayabilir miyim?”", "Elbette. Standart hesapla başlayıp sonuçlarımızı kendi hesabınızda görün. Hazır olduğunuzda VIP hesaba geçersiniz; uzmanınız olarak geçişi ben ayarlarım."],
+    ["“Kaybedersem?”", "Piyasada risk her zaman vardır, bunu saklamıyoruz. Bu yüzden lot büyüklüğünü ve stop seviyesini sermayenize göre birlikte belirliyoruz. Amacımız kontrollü risk ve istikrarlı büyüme."],
+    ["“Daha önce kaybettim.”", "Çok anlaşılır. Fark şu: bu sefer tek başınıza değil, kişisel uzmanınızla ve önceden planlanmış seviyelerle işlem yapıyorsunuz. Önce panelden bir iki işlemi canlı takip edin, sonra karar verin."],
+    ["“Düşüneyim, sonra dönerim.”", `Tabii. Deneme erişiminiz ${CONFIG.satis.adayGun} gün açık; bu sürede bir VIP işlemi baştan sona izleyin. Yeni bir VIP işlem geldiğinde size hemen haber vereyim mi?`],
+    ["“VIP hesabın farkı ne?”", "VIP hesapta aktif VIP işlemlerin yönünü ve seviyelerini görürsünüz, VIP Robot'u kullanabilir ve uzmanınızla birebir takip alırsınız."],
+    ["“Paramı çekebilir miyim?”", "Evet. Çekim talepleriniz resmi çekim süreciyle işlenir; adımları kişisel uzmanınız olarak size tek tek anlatırım."]
+  ];
+  $("#smFaq").innerHTML = F.map(([q,a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p>${smCopyBtn(a)}</details>`).join("");
+  smWire($("#s-satis"));
+}
+function kozMetni(K){
+  return `🏆 ${CONFIG.marka} VIP – son 14 günde ${K.tp.length} işlem hedefine ulaştı${K.st.length?`, ${K.st.length} stop`:""}\n` + K.sonTp.slice(0,6).map(x => `✅ ${x.sym} ${DIRW[x.dir]||""} (${x.tarih.split(" ")[0]}) → ${K.kar(x) || "TP "+(x.raw.t.join(" / ")||x.raw.tt||"")}`).join("\n");
+}
+function smListe(){
+  let L=[]; try{ L = JSON.parse(localStorage.getItem(SMKEY)||"[]"); }catch(e){}
+  $("#smList").innerHTML = L.length ? L.map(x => `<div><span><b>${esc(x.kod)}</b> · ${esc(x.ad)}</span><span class="${x.exp<Date.now()?"muted":"gold"}">${x.exp<Date.now()?"süresi doldu":"→ "+trDate(x.exp).split(" ")[0]}</span></div>`).join("") : '<div class="muted">Henüz kod oluşturmadınız. (Liste bu cihazda tutulur.)</div>';
+}
 const KEY = "avax_vip_session";
 function savedOk(){
   try{
     const s = JSON.parse(localStorage.getItem(KEY) || sessionStorage.getItem(KEY) || "null");
-    const ok = s && (CONFIG.erisimKodlari.includes(s.h) || (s.trial && CONFIG.deneme.kodlar.includes(s.h))) && s.exp > Date.now();
+    const ok = s && s.exp > Date.now() && (s.aday ? true : s.sales ? CONFIG.satis.kodlar.includes(s.h) : (CONFIG.erisimKodlari.includes(s.h) || (s.trial && CONFIG.deneme.kodlar.includes(s.h))));
     if (ok) window._session = s;
     return ok;
   }catch(e){ return false; }
@@ -1621,15 +1881,25 @@ function trialWindow(hs){
   if (now > end) return {ok:false, msg:`${d.gun} günlük deneme süreniz doldu.`};
   return {ok:true, end};
 }
-function renderTrial(){
-  const s = window._session;
-  if (!s || !s.trial) return;
-  $("#tierBadge").textContent = "◆ Deneme Üye" + (yatNow() ? " · MT5 " + yatNow().login : "");
+function renderTrial(again){
+  const s = window._session || {};
+  if (s.sales){
+    const g = adayView();
+    $("#tierBadge").textContent = `◆ Satış Uzmanı #${s.n}`;
+    $("#trialBar").innerHTML = `<span>📣 <b>Satış uzmanı modu</b>${g?" · şu an <b>adayın gördüğü ekranı</b> görüyorsunuz":" · VIP görünüm"}</span>
+      <span class="btnrow" style="margin:0"><button class="btn ${g?"goz-on":""}" onclick="setAdayGoz(${!g})">${g?"↩ VIP görünüme dön":"👁 Aday gözüyle bak"}</button><button class="btn pri" onclick="show('satis')">📣 Satış Merkezi</button></span>`;
+    $("#trialBar").style.display = ""; return;
+  }
+  if (again) return;
+  if (!s.trial) return;
+  $("#tierBadge").textContent = (s.aday ? "◆ Aday Üye" : "◆ Deneme Üye") + (yatNow() ? (s.aday ? " · Tel " : " · MT5 ") + yatNow().login : "");
   const tick = () => {
     const ms = s.exp - Date.now();
     if (ms <= 0){ try{localStorage.removeItem(KEY);}catch(e){} location.reload(); return; }
     const g = Math.floor(ms/864e5), sa = Math.floor(ms%864e5/36e5), dk = Math.floor(ms%36e5/6e4);
-    $("#trialBar").innerHTML = `<span>🎁 <b>Deneme erişimi</b> · kalan süre: <b>${g} gün ${sa} saat ${dk} dk</b></span>
+    $("#trialBar").innerHTML = s.aday
+      ? `<span>🎁 <b>Size özel VIP deneme erişimi</b> · kalan süre: <b>${g} gün ${sa} saat ${dk} dk</b></span><span class="btnrow" style="margin:0"><button class="btn hs-vip" onclick="openHesap('VIP hesap')">👑 VIP hesap aç</button><button class="btn" onclick="openHesap('Standart hesap')">Standart hesap aç</button></span>`
+      : `<span>🎁 <b>Deneme erişimi</b> · kalan süre: <b>${g} gün ${sa} saat ${dk} dk</b></span>
       <a class="btn pri" href="${waLink(CONFIG.marka+" VIP tam erişim almak istiyorum.")}" target="_blank" rel="noopener">Tam VIP erişim al</a>`;
   };
   $("#trialBar").style.display = ""; tick(); setInterval(tick, 30000);
@@ -1655,6 +1925,23 @@ function initGate(){
   }
 
   if (savedOk()) { boot(); return; }
+  let gm = "";
+  const gateMode = m => { if (m===gm) return; gm = m;
+    const subs = document.querySelectorAll("#gateForm .gate-sub");
+    $("#gateYatWrap").style.display = m==="sales" ? "none" : "";
+    subs[0].textContent = m==="aday" ? "Bilgileriniz" : "Yatırımcı Bilgileriniz";
+    $("#gateYatLogin").placeholder = m==="aday" ? "Telefon numaranız" : "MT5 hesap numaranız (login)";
+    $("#gateYatLogin").setAttribute("inputmode", m==="aday" ? "tel" : "numeric");
+    subs[1].textContent = m==="sales" ? "Satış Uzmanı Bilgileriniz" : m==="aday" ? "Size kodu gönderen uzmanınız" : "Kişisel Uzmanınız";
+    $("#gateUzAd").placeholder = m==="sales" ? "Adınız soyadınız" : "Uzmanınızın adı soyadı";
+    $("#gateUzTel").placeholder = m==="sales" ? "WhatsApp numaranız (05xx…)" : "Uzmanınızın WhatsApp numarası (05xx…)";
+  };
+  let gt = 0;
+  $("#gatePw").addEventListener("input", () => { clearTimeout(gt); gt = setTimeout(async () => {
+    const v = norm($("#gatePw").value);
+    if (/^A\d{1,2}-/.test(v)) return gateMode("aday");
+    gateMode(v.length>5 && CONFIG.satis.kodlar.includes(await sha256(v)) ? "sales" : "");
+  }, 250); });
   const py = getYat(); if (py){ $("#gateYatAd").value = py.ad; $("#gateYatLogin").value = py.login; }
   const pre = getUz(); if (pre){ $("#gateUzAd").value = pre.ad; $("#gateUzTel").value = pre.tel; }
   setTimeout(() => $("#gatePw").focus(), 300);
@@ -1664,11 +1951,44 @@ function initGate(){
     const box = $("#gateForm");
     $("#gateErr").style.color = "";
     if (!v){ $("#gateErr").textContent = "Lütfen erişim kodunuzu girin."; return; }
+    const shake = () => { box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake"); };
+    // --- Satış uzmanı kodu
+    const hs0 = await sha256(v), sn = CONFIG.satis.kodlar.indexOf(hs0);
+    if (sn >= 0){
+      const [su, suErr] = checkUz($("#gateUzAd").value, $("#gateUzTel").value);
+      if (!su){ $("#gateErr").textContent = suErr.replace("uzmanınızın adını","adınızı soyadınızı").replace("uzmanınızın WhatsApp","WhatsApp"); shake(); return; }
+      setUz(su.ad, su.tel);
+      const days = $("#gateRemember").checked ? CONFIG.hatirlaGun : 0;
+      const rec = {h:hs0, sales:true, n:sn+1, exp: Date.now() + (days ? days*864e5 : 12*36e5)};
+      window._session = rec;
+      try{ (days ? localStorage : sessionStorage).setItem(KEY, JSON.stringify(rec)); }catch(e){}
+      $("#gateErr").style.color = "var(--up)"; $("#gateErr").textContent = `✓ Satış uzmanı #${sn+1} girişi onaylandı`;
+      setTimeout(boot, 450); return;
+    }
+    // --- Aday deneme kodu (satışçının ürettiği)
+    const ak = await adayKodCoz(v);
+    if (ak){
+      if (ak.gecersiz){ $("#gateErr").textContent = "Deneme kodu geçersiz. Kodu uzmanınızın gönderdiği gibi yazın."; shake(); return; }
+      const ad = String($("#gateYatAd").value||"").trim().replace(/\s+/g," "), tel = String($("#gateYatLogin").value||"").replace(/\D/g,"");
+      if (ad.length < 3 || !/\s/.test(ad)){ $("#gateErr").textContent = "Lütfen adınızı ve soyadınızı yazın."; shake(); return; }
+      if (tel.length < 7 || tel.length > 15){ $("#gateErr").textContent = "Lütfen telefon numaranızı yazın."; shake(); return; }
+      const [au, auErr] = checkUz($("#gateUzAd").value, $("#gateUzTel").value);
+      if (!au){ $("#gateErr").textContent = auErr; shake(); return; }
+      if (ak.exp <= Date.now()){
+        $("#gateErr").innerHTML = `Deneme süreniz doldu. <a href="${waLinkTo(au.tel, `Merhaba, ben ${ad} (Tel: ${tel}). ${CONFIG.marka} VIP deneme süremi doldurdum, hesap açmak istiyorum.`)}" target="_blank" rel="noopener">Uzmanınıza yazın →</a>`; shake(); return;
+      }
+      setUz(au.ad, au.tel); setYat(ad, tel);
+      const rec = {h:ak.kod, aday:true, trial:true, n:ak.n, exp:ak.exp};
+      try{ localStorage.setItem(KEY, JSON.stringify(rec)); }catch(e){}
+      window._session = rec;
+      $("#gateErr").style.color = "var(--up)"; $("#gateErr").textContent = "✓ Size özel VIP deneme erişimi onaylandı";
+      setTimeout(boot, 450); return;
+    }
     const [yt, ytErr] = checkYat($("#gateYatAd").value, $("#gateYatLogin").value);
     if (!yt){ $("#gateErr").textContent = ytErr; box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake"); return; }
     const [uz, uzErr] = checkUz($("#gateUzAd").value, $("#gateUzTel").value);
     if (!uz){ $("#gateErr").textContent = uzErr; box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake"); return; }
-    const hs = await sha256(v);
+    const hs = hs0;
     if (CONFIG.deneme.kodlar.includes(hs)){
       const t = trialWindow(hs);
       if (!t.ok){
