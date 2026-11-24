@@ -92,3 +92,78 @@ Teknik: SAT 🔻 · RSI 35 · ADX 30
 Günlük volatilite %3,84 ve ortalama hareket alanı 921 puan ile kısa vadeli dalgalanma yüksek seyrediyor. Bugünkü yükseliş haftalık -%7,3'lük kaybın ardından geldiği için teknik yapıyı henüz değiştirmiş değil.
 
 26.410 bölgesinin aşılması, tepkinin trend dönüşüne evrilmesi açısından ilk teyit noktası olur.
+
+---
+TARİH: 24.11.2026
+UZMAN: Alp Çetin
+UNVAN: VIP Uzman
+SEMBOL: DAX
+GÖRÜŞ: Düşüş
+DESTEK: 24.764 / 24.398 / 24.023
+DİRENÇ: 25.485 / 25.857 / 26.238
+GÖRSEL: analiz/dax-2411.jpg
+BAŞLIK: 🇩🇪 DAX 25.121,90 ▾ -%1,11 — 24.764 kırılırsa 24.398 / 24.023 riski
+METİN:
+Avrupa kapanışına doğru ABD tüketici güveninin 92,4 beklentisine karşılık 103,3 açıklanması küresel talep görünümünü destekleyebilecek olsa da güçlü verinin Fed’in yüksek faiz politikasını sürdürme ihtimalini artırması, DAX endeksinin 25121.90 seviyesindeki %1.11’lik kaybının ardından 24764 desteğinin kırılmasıyla 24398 / 24023 bölgelerine gerileme riskini canlı tutuyor.
+
+Almanya’nın Ukrayna için açıkladığı 11,6 milyar euroluk savunma yardımı ve ortak İHA üretimi planları sektörel beklentileri güçlendirirken teknik açıdan 25485 direncinin aşılması 25857 / 26238 hedeflerine doğru tepki alımlarını destekleyebilir.
+
+---
+TARİH: 24.11.2026
+UZMAN: Alp Çetin
+UNVAN: VIP Uzman
+SEMBOL: XAGUSD
+GÖRÜŞ: Düşüş
+DESTEK: 41,27 / 40,86 / 40,44
+DİRENÇ: 42,08 / 42,51 / 42,95
+GÖRSEL: analiz/xag-2411.jpg
+BAŞLIK: ⚪ XAGUSD ▾ -%3,33 — 41,27 desteği kırılırsa satış derinleşebilir
+METİN:
+ABD tüketici güveninin Kasım ayında 92,4 beklentisini 10,9 puan aşarak 103,3 seviyesinde gerçekleşmesi, dolar ve faiz beklentileri üzerinden değerli metallerde baskı oluşturabilecek bir gelişme olarak öne çıkarken gümüşün %3.33 gerilemesiyle 41.27 desteğinin kırılması 40.86 / 40.44 bölgelerine satışları derinleştirebilir.
+
+Hizmet PMI verisinin 54,7’ye gerilemesi ekonomik büyümenin sektörel görünümüne ilişkin soru işaretlerini canlı tutarken İran kaynaklı jeopolitik risklerin güvenli liman talebini artırması durumunda 42.08 direncinin aşılması 42.51 / 42.95 seviyelerine toparlanmayı destekleyebilir.
+
+---
+TARİH: 24.11.2026
+UZMAN: Alp Çetin
+UNVAN: VIP Uzman
+SEMBOL: BRNUSD
+GÖRÜŞ: Yükseliş
+DESTEK: 86,71 / 85,74 / 84,75
+DİRENÇ: 88,61 / 89,59 / 90,58
+GÖRSEL: analiz/brn-2411.jpg
+BAŞLIK: 🛢️ BRNUSD 87,655 ▴ +%1,33 — 88,61 aşılırsa 89,59 / 90,58
+METİN:
+Enerji piyasalarında arz güvenliğine yönelik kaygıların yeniden ağırlık kazanması, Brent petrolün 87.655 seviyesinde %1.33 yükselmesini desteklerken İran’ın ABD deniz ablukasını askeri yöntemlerle kırabileceğini açıklaması ve ABD tüketici güveninin 103,3 ile 92,4 beklentisini aşması, 88.61 direncinin geçilmesi halinde 89.59 / 90.58 seviyelerine ilerleme potansiyelini artırabilir.
+
+Uluslararası Enerji Ajansının dördüncü çeyrek için günlük 2 milyon varillik arz fazlası öngörüsü yükselişlerin kalıcılığını sınırlarken teknik açıdan 86.71 desteğinin kaybedilmesi 85.74 / 84.75 bölgelerine geri çekilmeyi hızlandırabilir.
+
+---
+TARİH: 24.11.2026
+UZMAN: Alp Çetin
+UNVAN: VIP Uzman
+SEMBOL: NDXUSD
+GÖRÜŞ: Düşüş
+DESTEK: 25.869 / 25.503 / 25.128
+DİRENÇ: 26.591 / 26.963 / 27.344
+GÖRSEL: analiz/ndx-2411.jpg
+BAŞLIK: 🖥️ NDXUSD 26.227,08 ▾ -%1,90 — 25.869 kırılırsa satış genişleyebilir
+METİN:
+Beklentilerin belirgin üzerinde açıklanan ABD Conference Board tüketici güveninin Kasım ayında 92,4 tahminine karşılık 103,3 seviyesine yükselmesi ekonomik dayanıklılık algısını güçlendirirken NASDAQ endeksindeki %1.90’lık kayıp, yüksek faizlerin teknoloji hisselerinin değerlemeleri üzerinde baskı oluşturabileceğine işaret ediyor ve 25869 desteğinin kırılması 25503 / 25128 bölgelerine satışları genişletebilir.
+
+Nvidia’nın Jensen Huang’ı yeniden CEO olarak görevlendirmesi ve CrowdStrike’ın Zscaler’ı 43,9 milyar dolara satın alma anlaşması sektörel beklentileri desteklerken ABD seansında 26591 direncinin aşılması 26963 / 27344 hedeflerine toparlanmayı sağlayabilir.
+
+---
+TARİH: 24.11.2026
+UZMAN: Alp Çetin
+UNVAN: VIP Uzman
+SEMBOL: XAUUSD
+GÖRÜŞ: Düşüş
+DESTEK: 3.600 / 3.556
+DİRENÇ: 3.654
+GÖRSEL: analiz/xau-2411.jpg
+BAŞLIK: 🟡 XAUUSD — 3.600 altı günlük kapanış 3.556’yı gündeme getirir
+METİN:
+Tüketici güveninin aşırı artması ile birlikte dolar varlıklar kuvvetleniyor. Eğer 3600 $ altı gün kapatırsa 3556 desteğine kadar baskıyı devam ettirebilir.
+
+Toparlanma adına en güçlü ihtimal 3654 üstü olur (tutunmada).
