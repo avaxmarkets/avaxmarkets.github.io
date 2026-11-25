@@ -167,3 +167,61 @@ METİN:
 Tüketici güveninin aşırı artması ile birlikte dolar varlıklar kuvvetleniyor. Eğer 3600 $ altı gün kapatırsa 3556 desteğine kadar baskıyı devam ettirebilir.
 
 Toparlanma adına en güçlü ihtimal 3654 üstü olur (tutunmada).
+
+---
+TARİH: 25.11.2026
+UZMAN: Cenk Aydın
+UNVAN: VIP Uzman
+SEMBOL: NDXUSD
+GÖRÜŞ: Düşüş
+GÖRSEL: analiz/ndx-2511.jpg
+BAŞLIK: 🖥️ NDXUSD — Satıcılı yapı sürüyor, yönü ABD GSYİH verisi belirleyecek
+METİN:
+NASDAQ satıcılı yapıda devam ediyor fakat verilere göre durum değişebilir.
+
+EĞER ABD GSYİH (büyüme verisi) YÜKSEK GELİRSE FED faizleri artırmak için alan bulabilir. Bu da NASDAQ'ta daha sert satışa sebep olur.
+
+GSYİH %3,4 altı, ancak %2,2 altı gelirse (yani daha şiddetli) BİR TOPARLANMA gerçekleşebilir.
+
+---
+TARİH: 25.11.2026
+UZMAN: Cenk Aydın
+UNVAN: VIP Uzman
+SEMBOL: DAX
+GÖRÜŞ: Düşüş
+GÖRSEL: analiz/dax-2511.jpg
+BAŞLIK: 🇩🇪 DAX — Teknikte satıcılı, çok kısa vadede +200 tepki gelebilir
+METİN:
+DAX tarafı hâlâ satıcılı (TEKNİKTE) fakat çok kısa vadede +200 euro kadar (200 pip) yukarı yönlü tepki verebilir.
+
+GENEL MANADA trend kırdı, retest yaptı ve teknik açıdan haftalık yapıda GÜÇLÜ SAT konumunda; o yüzden alımlar sınırlı kalabilir, dikkat.
+
+---
+TARİH: 25.11.2026
+UZMAN: Cenk Aydın
+UNVAN: VIP Uzman
+SEMBOL: XAGUSD
+GÖRÜŞ: Nötr
+KRİTİK: 40,00
+DESTEK: 38,80
+GÖRSEL: analiz/xag-2511.jpg
+BAŞLIK: ⚪ XAGUSD — Veri öncesi 40 $ üstünde tepki, henüz güçlenmedi
+METİN:
+VERİ öncesi 40 $ üstüne GÜMÜŞ'te de agresif bir tepki var ancak henüz güçlenmedi.
+
+ABD büyüme rakamları özellikle %2,2 altı gelirse ÇOK DAHA sert toparlayabilir.
+
+VERİLERE az kaldı; 40 dolar altında 38.80 bölgesine kadar (SATICILI işlemlerde) iştah olduğunu hatırlatayım.
+
+---
+TARİH: 25.11.2026
+UZMAN: Cenk Aydın
+UNVAN: VIP Uzman
+SEMBOL: XAUUSD
+GÖRÜŞ: Nötr
+DESTEK: 3.500
+DİRENÇ: 3.530
+GÖRSEL: analiz/xau-2511.jpg
+BAŞLIK: 🟡 XAUUSD — 3.500'den tepki alımı, yön açıklanacak veriye bağlı
+METİN:
+ALTIN veri öncesi 3500'den tepki alımı görüyor (tekrar 3530 bölgesine). ARTIK durum açıklanacak verilere bağlı olacak; 1 saat kadar kaldı.
