@@ -225,3 +225,63 @@ GÖRSEL: analiz/xau-2511.jpg
 BAŞLIK: 🟡 XAUUSD — 3.500'den tepki alımı, yön açıklanacak veriye bağlı
 METİN:
 ALTIN veri öncesi 3500'den tepki alımı görüyor (tekrar 3530 bölgesine). ARTIK durum açıklanacak verilere bağlı olacak; 1 saat kadar kaldı.
+
+---
+TARİH: 26.11.2026
+UZMAN: Aras Altay
+UNVAN: VIP Uzman
+SEMBOL: XAGUSD
+GÖRÜŞ: Düşüş
+KRİTİK: 40,00
+DESTEK: 40,40
+GÖRSEL: analiz/xag-2611.jpg
+BAŞLIK: ⚪ XAGUSD — Negatif eğimde üst bantta, 40,40 desteğine ataklar görülebilir
+METİN:
+GÜMÜŞ de ALTIN ile benzer şekilde negatif eğim içerisinde üst bantta hareket ediyor; 40.40 $ desteğine kadar ataklar görülebilir.
+
+ŞÜKRAN günü sebebiyle hacim dar iken 40 $ altı kapatmaması TEKRAR toparlanması adına umut olacaktır.
+
+---
+TARİH: 26.11.2026
+UZMAN: Aras Altay
+UNVAN: VIP Uzman
+SEMBOL: XAUUSD
+GÖRÜŞ: Nötr
+DESTEK: 3.540
+DİRENÇ: 3.615
+GÖRSEL: analiz/xau-2611.jpg
+BAŞLIK: 🟡 XAUUSD — Şükran Günü'nde dar hacim, 3.540 - 3.615 arası dalgalanma
+METİN:
+ONS ALTIN'da GÜNLÜK hacim zayıf bekleniyor; ABD Şükran Günü sebebiyle piyasalarda hacim çok dar.
+
+3540 - 3615 arası gün içerisinde dalgalanma bekliyorum.
+
+---
+TARİH: 26.11.2026
+UZMAN: Aras Altay
+UNVAN: VIP Uzman
+SEMBOL: EURUSD
+GÖRÜŞ: Nötr
+DESTEK: 1,0970
+DİRENÇ: 1,0994 / 1,1000
+GÖRSEL: analiz/eur-2611.jpg
+BAŞLIK: 💶 EURUSD — 1,1000 denemeleri başarısız, 1,0970 - 1,0994 arası dalgalanma
+METİN:
+EURUSD için 1.1000 denemeleri başarısız. Bugün için de başarısız kalabilir (ABD piyasaları kapalı).
+
+1.0994 - 1.0970 arası gün boyunca dalgalanma beklentisi...
+
+---
+TARİH: 26.11.2026
+UZMAN: Aras Altay
+UNVAN: VIP Uzman
+SEMBOL: USDJPY
+GÖRÜŞ: Nötr
+DESTEK: 159,05
+DİRENÇ: 159,60
+GÖRSEL: analiz/jpy-2611.jpg
+BAŞLIK: 💴 USDJPY — 159,05 - 159,60 arası git gel, günlük vadede net yön yok
+METİN:
+USDJPY bankalararası takasta zayıf kalıyor (Şükran Günü sebebiyle).
+
+159.05 - 159.60 arası gün bitene dek belli seviyelerde git gel yapabilir; ciddi bir yön beklentisi günlük vadede yok.
